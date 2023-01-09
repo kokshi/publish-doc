@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kokshi.github.io/publish-doc/pipenv/</loc>
+         <lastmod>2023-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kokshi.github.io/publish-doc/test/</loc>
          <lastmod>2023-01-09</lastmod>
          <changefreq>daily</changefreq>

@@ -33,8 +33,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=BIZ+UDPGothic:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"BIZ UDPGothic";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -197,6 +197,34 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Documentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documentation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -231,61 +259,68 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    概要
+    動かす
+  </a>
+  
+    <nav class="md-nav" aria-label="動かす">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-for-mkdocs" class="md-nav__link">
+    Material for MkDocs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    インストール
+        
+          <li class="md-nav__item">
+  <a href="#material-for-mkdocs-plantuml" class="md-nav__link">
+    Material for MkDocs + Plantuml
   </a>
   
-    <nav class="md-nav" aria-label="インストール">
+    <nav class="md-nav" aria-label="Material for MkDocs + Plantuml">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ビルド
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    ローカルにインストール
+    開発用サーバー
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Dockerで起動
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plantuml" class="md-nav__link">
-    Plantumlを使いたいので…
-  </a>
-  
-    <nav class="md-nav" aria-label="Plantumlを使いたいので…">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker_1" class="md-nav__link">
-    ローカルビルド(Docker)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#github-actions" class="md-nav__link">
-    Github Actions
+    デプロイ (Github Actions)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    見た目の変更
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    参考
   </a>
   
 </li>
@@ -297,18 +332,10 @@
     </li>
   
 
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pipenv/" class="md-nav__link">
-        pipenv
-      </a>
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -320,10 +347,139 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Application
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Application" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Application
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipenv/" class="md-nav__link">
+        pipenv
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Network" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../none" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
       <a href="../test/" class="md-nav__link">
         test
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -356,61 +512,68 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    概要
+    動かす
+  </a>
+  
+    <nav class="md-nav" aria-label="動かす">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#material-for-mkdocs" class="md-nav__link">
+    Material for MkDocs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    インストール
+        
+          <li class="md-nav__item">
+  <a href="#material-for-mkdocs-plantuml" class="md-nav__link">
+    Material for MkDocs + Plantuml
   </a>
   
-    <nav class="md-nav" aria-label="インストール">
+    <nav class="md-nav" aria-label="Material for MkDocs + Plantuml">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ビルド
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    ローカルにインストール
+    開発用サーバー
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Dockerで起動
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plantuml" class="md-nav__link">
-    Plantumlを使いたいので…
-  </a>
-  
-    <nav class="md-nav" aria-label="Plantumlを使いたいので…">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker_1" class="md-nav__link">
-    ローカルビルド(Docker)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#github-actions" class="md-nav__link">
-    Github Actions
+    デプロイ (Github Actions)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    見た目の変更
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    参考
   </a>
   
 </li>
@@ -430,31 +593,53 @@
 
 
 <h1 id="mkdocs">MkDocs</h1>
-<p>Created: 2023/01/09</p>
-<h2 id="_1">概要</h2>
-<p>ドキュメント化をなんとかしたいのでMkDocsに手を出します。 </p>
-<h2 id="_2">インストール</h2>
-<h3 id="_3">ローカルにインストール</h3>
-<pre><code>$ pipenv install mkdocs
-</code></pre>
-<h3 id="docker">Dockerで起動</h3>
-<blockquote>
-<p>https://zenn.dev/optimisuke/articles/4489bda5ab29ff</p>
-</blockquote>
-<pre><code class="language-powershell">$ docker run --rm -it -v ${PWD}:/docs -p 8004:8000 squidfunk/mkdocs-material
-</code></pre>
-<h2 id="plantuml">Plantumlを使いたいので…</h2>
-<p>先駆者パワー</p>
-<blockquote>
-<p>https://github.com/mikaelhg/mkdocs-material-plantuml</p>
-</blockquote>
-<h3 id="docker_1">ローカルビルド(Docker)</h3>
+<p>MkDocsは、Markdownドキュメントから静的サイトを生成するツールです。</p>
+<h2 id="_1">動かす</h2>
+<h3 id="material-for-mkdocs"><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></h3>
+<p>マテリアルデザインのテーマが適用されたMkDocs。Dockerで動作可能。</p>
+<h3 id="material-for-mkdocs-plantuml">Material for MkDocs + Plantuml</h3>
+<p>今回はPlantumlも使いたいので下記のリポジトリを使用する。</p>
+<p><a href="https://github.com/mikaelhg/mkdocs-material-plantuml">Github - mikaelhg/mkdocs-material-plantuml</a></p>
+<h4 id="_2">ビルド</h4>
+<p>プロジェクトフォルダ上で実行。</p>
 <pre><code>$ docker run --rm -it -v ${PWD}:/docs ghcr.io/mikaelhg/mkdocs-material-plantuml:latest
 </code></pre>
-<h2 id="github-actions">Github Actions</h2>
-<p>やりたいのは
-1. [repo1] commit -&gt; push
-1. [repo2] Github Actionsにてサイトがプッシュされる</p>
+<h4 id="_3">開発用サーバー</h4>
+<p>ファイルの変更を検知してリロードしてくれる。</p>
+<pre><code>$ docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/mikaelhg/mkdocs-material-plantuml:latest serve --dev-addr=0.0.0.0:8000
+</code></pre>
+<h4 id="github-actions">デプロイ (Github Actions)</h4>
+<p>Pushするとサイトが生成されるように設定する。</p>
+<p>流れとしては次の通り(Github Actionsを寄っく知らないので間違った理解の可能性あり)。
+1. <code>on: push: - main</code>でpushを検知。
+1. <code>actions/checkout@v2</code>
+1. <code>docker://ghcr.io/mikaelhg/mkdocs-material-plantuml:latest</code>で静的サイトを生成(コンテナのEntrypointがbuildになっている、volumeにどうやって紐づけているかは不明)
+1. <code>peaceiris/actions-gh-pages@v3</code>で生成されたサイトをGithub Pagesにデプロイ。</p>
+<pre><code class="language-yaml">on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: mkdocs build
+        uses: docker://ghcr.io/mikaelhg/mkdocs-material-plantuml:latest
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: kokshi/publish-doc
+          publish_dir: ./site
+</code></pre>
+<h2 id="_4">見た目の変更</h2>
+<h2 id="_5">参考</h2>
+<ul>
+<li><a href="https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions">Material for MkDocs - Publishing your site</a></li>
+<li><a href="https://futureys.tokyo/lets-deploy-document-built-by-mkdocs-to-github-pages-by-using-github-actions/#toc12">MkDocs で作ったドキュメントを GitHub Actions を使って GitHub Pages にデプロイしよう</a></li>
+<li><a href="https://dev.classmethod.jp/articles/material-for-mkdocs-customization-about-navigation/">プロジェクトドキュメント構築向け静的サイトジェネレータ「Material for MkDocs」の色々な設定を試してみる(ナビゲーション編)</a></li>
+</ul>
 
 
 
@@ -464,6 +649,11 @@
             
           </div>
         </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
         
       </main>
       
@@ -526,7 +716,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.expand", "navigation.top"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.2ab50757.min.js"></script>

@@ -2,32 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kokshi.github.io/publish-doc/</loc>
-         <lastmod>2023-01-19</lastmod>
+         <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/document/</loc>
-         <lastmod>2023-01-19</lastmod>
+         <lastmod>2023-02-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kokshi.github.io/publish-doc/future_development/</loc>
+         <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/mkdocs/</loc>
-         <lastmod>2023-01-19</lastmod>
+         <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/pipenv/</loc>
-         <lastmod>2023-01-19</lastmod>
+         <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/proxmox/</loc>
-         <lastmod>2023-01-19</lastmod>
+         <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/test/</loc>
-         <lastmod>2023-01-19</lastmod>
+         <lastmod>2023-02-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

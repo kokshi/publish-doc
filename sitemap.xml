@@ -2,37 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kokshi.github.io/publish-doc/</loc>
-         <lastmod>2023-02-25</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/document/</loc>
-         <lastmod>2023-02-25</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/future_development/</loc>
-         <lastmod>2023-02-25</lastmod>
+         <lastmod>2023-04-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kokshi.github.io/publish-doc/grafana/</loc>
+         <lastmod>2023-04-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kokshi.github.io/publish-doc/influxdb/</loc>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/mkdocs/</loc>
-         <lastmod>2023-02-25</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/pipenv/</loc>
-         <lastmod>2023-02-25</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/proxmox/</loc>
-         <lastmod>2023-02-25</lastmod>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kokshi.github.io/publish-doc/test/</loc>
-         <lastmod>2023-02-25</lastmod>
+         <loc>https://kokshi.github.io/publish-doc/other/test/</loc>
+         <lastmod>2023-04-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kokshi.github.io/publish-doc/other/learning_modern_linux/3_script/</loc>
+         <lastmod>2023-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

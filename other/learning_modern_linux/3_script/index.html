@@ -601,6 +601,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    変数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ビルドインコマンド
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ジョブ制御
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -703,6 +724,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    変数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ビルドインコマンド
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ジョブ制御
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -764,7 +806,7 @@ user@vm:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> <
 <li><code>stderr</code> (FD 2): 標準エラー出力</li>
 </ul>
 <p>特に指定しない限り、シェルで入力したコマンドはキーボードから入力(stdin)され、画面に出力(stdout)する。エラー発生時も画面に出力する(stderr)。</p>
-<p>ストリームはリダイレクトできる。<code>$FD&gt;</code>と<code>&lt;$FD</code>を使用する。<code>$FD</code>はファイルディスクリプタである。</p>
+<p>ストリームは<strong>リダイレクト</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>できる。<code>$FD&gt;</code>と<code>&lt;$FD</code>を使用する。<code>$FD</code>はファイルディスクリプタである。</p>
 <p>例えば次の通り。</p>
 <ul>
 <li><code>2&gt;</code> <code>stderr</code>ストリームをリダイレクト</li>
@@ -781,6 +823,87 @@ user@vm:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> <
 <li>パイプ (<code>|</code>)
     あるプロセスの<code>stdout</code>と次のプロセスの<code>stdin</code>をつなぐ</li>
 </ul>
+<div class="admonition info 登場したコマンド">
+<p class="admonition-title">Info</p>
+<ul>
+<li><code>curl</code> HTTPリクエストを投げる</li>
+<li><code>head</code> 先頭から数行表示する<ul>
+<li>ex <code>$ head -n 10</code></li>
+</ul>
+</li>
+<li><code>tr</code> stdinから読み込んだ文字を置換する</li>
+<li><code>wc</code> 'word count' 文字や行数を数える</li>
+</ul>
+</div>
+<h4 id="_5">変数</h4>
+<p>2種類ある。<code>unset</code>で未定義の状態に戻せる。</p>
+<ul>
+<li>環境変数<ul>
+<li>シェル全体の設定</li>
+<li><code>export</code>を使って作成(bash)</li>
+</ul>
+</li>
+<li>シェル変数<ul>
+<li>実行中のシェルでのみ有効、子プロセスには継承されない</li>
+<li><code>set</code>を使って作成もできる</li>
+</ul>
+</li>
+</ul>
+<p>変数にアクセスするためには変数の前に<code>$</code>をつける。
+実例は次のとおり。</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nv">MY_VAR</span><span class="o">=</span><span class="m">42</span><span class="w"> </span><span class="c1"># シェル変数</span>
+$<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^MY_*&quot;</span>
+<span class="nv">MY_VAR</span><span class="o">=</span><span class="m">42</span>
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>MY_VAR
+MY_VAR
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$MY_VAR</span>
+<span class="m">42</span>
+$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">MY_GLB</span><span class="o">=</span><span class="s2">&quot;omg&quot;</span><span class="w"> </span><span class="c1"># 環境変数</span>
+$<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^MY_*&quot;</span>
+<span class="nv">MY_GLB</span><span class="o">=</span>omg
+<span class="nv">MY_VAR</span><span class="o">=</span><span class="m">42</span>
+$<span class="w"> </span>bash<span class="w"> </span><span class="c1"># ここから子プロセスのシェル</span>
+$<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^MY_*&quot;</span>
+<span class="nv">MY_GLB</span><span class="o">=</span>omg<span class="w"> </span><span class="c1"># &lt;- 環境変数だけ</span>
+</code></pre></div>
+<p>次のような環境変数もある。シェルや環境によって異なる。</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span><span class="c1"># ? 直前に実行したコマンドの実行ステータス (0が正常, 1-255は失敗)</span>
+<span class="m">0</span>
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$$</span><span class="w"> </span><span class="c1"># $ 現在のプロセスのPID</span>
+<span class="m">198</span>
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$0</span><span class="w"> </span><span class="c1"># 0 現在のプロセスの名前</span>
+-bash
+$<span class="w"> </span>ps
+<span class="w">  </span>PID<span class="w"> </span>TTY<span class="w">          </span>TIME<span class="w"> </span>CMD
+<span class="w">  </span><span class="m">198</span><span class="w"> </span>pts/2<span class="w">    </span><span class="m">00</span>:00:00<span class="w"> </span>bash
+<span class="w">  </span><span class="m">253</span><span class="w"> </span>pts/2<span class="w">    </span><span class="m">00</span>:00:00<span class="w"> </span>ps
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$_</span><span class="w"> </span><span class="c1"># _ 直前のコマンド</span>
+ps
+</code></pre></div>
+<h4 id="_6">ビルドインコマンド</h4>
+<p>シェルにはビルドインコマンドが用意されている。そもそもコマンドにはシェルビルドインだけでなく、<code>/usr/bin</code>などシェルの外部にインストールやエイリアスのコマンドなど種類がある。</p>
+<p>コマンドの種類を調べるためには<code>type</code>が利用できる。</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="nb">cd</span>
+<span class="nb">cd</span><span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>shell<span class="w"> </span><span class="nb">builtin</span>
+$<span class="w"> </span><span class="nb">type</span><span class="w"> </span>sh
+sh<span class="w"> </span>is<span class="w"> </span>/usr/bin/sh
+$<span class="w"> </span><span class="nb">type</span><span class="w"> </span>ls
+ls<span class="w"> </span>is<span class="w"> </span>aliased<span class="w"> </span>to<span class="w"> </span><span class="sb">`</span>ls<span class="w"> </span>--color<span class="o">=</span>auto<span class="err">&#39;</span>
+</code></pre></div>
+<p>また、コマンドの実行可能ファイルがある場所は~~<code>which</code>~~<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> <code>command -v</code> で取得できる。</p>
+<p>参考 <a href="https://qiita.com/ko1nksm/items/29009aeb3f788bb89757">Qiita - POSIXコマンドは「どの環境にもあるコマンド」ではないよという話</a></p>
+<h4 id="_7">ジョブ制御</h4>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>stdin, stdout, stderrをシェルのデフォルト以外に転送すること(シェルのデフォルトはキーボードやモニタ)&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><code>which</code>コマンドはPOSIXで規定されていない外部プログラムのため、利用できない環境もあるかもしれません。一方、<code>command</code>はbashではビルドインコマンド(POSIXでも規定)です。&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 

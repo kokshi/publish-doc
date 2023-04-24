@@ -627,6 +627,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    モダンなコマンド
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -747,6 +754,13 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    モダンなコマンド
+  </a>
   
 </li>
         
@@ -893,6 +907,34 @@ ls<span class="w"> </span>is<span class="w"> </span>aliased<span class="w"> </sp
 <p>また、コマンドの実行可能ファイルがある場所は~~<code>which</code>~~<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> <code>command -v</code> で取得できる。</p>
 <p>参考 <a href="https://qiita.com/ko1nksm/items/29009aeb3f788bb89757">Qiita - POSIXコマンドは「どの環境にもあるコマンド」ではないよという話</a></p>
 <h4 id="_7">ジョブ制御</h4>
+<p><strong>フォアグラウンド実行</strong> シェルで通常通りコマンドを実行し、画面とキーボードの制御を受ける</p>
+<p>対話的に実行しない場合やサーバのようなプログラムの場合、<strong>ジョブ制御</strong>と<strong>バッググラウンドジョブ</strong>がある。</p>
+<ul>
+<li>バックグラウンドでプロセスを起動するには最後に <strong>&amp;</strong> をつける</li>
+<li>フォアグラウンドのプロセスをバッググラウンドに送るには <strong>Ctrl + Z</strong> を押す</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>watch<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="s2">&quot;ls&quot;</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="c1"># watch コマンドをバッググラウンドで実行</span>
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="m">299</span>
+$<span class="w"> </span><span class="nb">jobs</span><span class="w"> </span><span class="c1"># すべてのジョブの一覧を表示</span>
+<span class="o">[</span><span class="m">1</span><span class="o">]</span>+<span class="w">  </span>Stopped<span class="w">                 </span>watch<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="s2">&quot;ls&quot;</span>
+$<span class="w"> </span><span class="nb">fg</span><span class="w"> </span><span class="c1"># あるプロセスをフォアグラウンドで実行</span>
+</code></pre></div>
+<div class="admonition info 登場したコマンド">
+<p class="admonition-title">Info</p>
+<ul>
+<li><code>nohup COMMAND &amp;</code> シェルが閉じた後もコマンドをバックグラウンドで実行する</li>
+<li><code>disown</code></li>
+<li><code>kill</code> 対象のプロセスにシグナルを送信して終了させる</li>
+</ul>
+</div>
+<h3 id="_8">モダンなコマンド</h3>
+<p>日常的に使うコマンドをより使いやすくしたコマンドがある。</p>
+<ul>
+<li><code>exa</code> ディレクトリの内容を出力</li>
+<li><code>bat</code> ファイルの内容を表示(<code>cat</code>の進化系)</li>
+<li><code>rg</code> ファイルの中身検索(<code>find</code>と<code>grep</code>)</li>
+<li><code>jq</code> JSONデータの処理</li>
+</ul>
 <div class="footnote">
 <hr />
 <ol>

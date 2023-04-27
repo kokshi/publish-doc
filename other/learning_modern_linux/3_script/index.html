@@ -634,6 +634,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    シェル作業の効率化
+  </a>
+  
+    <nav class="md-nav" aria-label="シェル作業の効率化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    ファイル内容の整理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    長いファイルの参照
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -761,6 +788,33 @@
   <a href="#_8" class="md-nav__link">
     モダンなコマンド
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    シェル作業の効率化
+  </a>
+  
+    <nav class="md-nav" aria-label="シェル作業の効率化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    ファイル内容の整理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    長いファイルの参照
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -934,6 +988,54 @@ $<span class="w"> </span><span class="nb">fg</span><span class="w"> </span><span
 <li><code>bat</code> ファイルの内容を表示(<code>cat</code>の進化系)</li>
 <li><code>rg</code> ファイルの中身検索(<code>find</code>と<code>grep</code>)</li>
 <li><code>jq</code> JSONデータの処理</li>
+</ul>
+<h3 id="_9">シェル作業の効率化</h3>
+<h4 id="_10">ファイル内容の整理</h4>
+<p><code>vi</code>を使わないテキストの処理も色々ある。</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># /tmp/something を作成し一行追加</span>
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;First line&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/something
+
+<span class="c1"># /tmp/something を表示</span>
+$<span class="w"> </span>cat<span class="w"> </span>/tmp/something
+First<span class="w"> </span>Line
+
+<span class="c1"># /tmp/something の2行目を追記</span>
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Second Line&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/tmp/something<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+&gt;<span class="w"> </span>cat<span class="w"> </span>/tmp/something
+First<span class="w"> </span>Line
+Second<span class="w"> </span>Line
+
+<span class="c1"># /tmp/something の内容をsedで置換しstdoutへ (-iオプションで上書き)</span>
+$<span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/Line/LINE/&#39;</span><span class="w"> </span>/tmp/something
+First<span class="w"> </span>LINE
+Second<span class="w"> </span>LINE
+
+
+<span class="c1"># ヒアドキュメントでファイルを作成</span>
+<span class="c1"># https://tldp.org/LDP/abs/html/here-docs.html</span>
+$<span class="w"> </span>cat<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39; &gt; /tmp/another</span>
+<span class="s">First Line</span>
+<span class="s">Second line</span>
+<span class="s">Third line</span>
+<span class="s">EOF</span>
+
+<span class="c1"># ファイルの差分を表示</span>
+$<span class="w"> </span>diff<span class="w"> </span>-y<span class="w"> </span>/tmp/something<span class="w"> </span>/tmp/another
+First<span class="w"> </span>Line<span class="w">                                                      </span>First<span class="w"> </span>Line
+Second<span class="w"> </span>Line<span class="w">                                                   </span><span class="p">|</span><span class="w"> </span>Second<span class="w"> </span>line
+<span class="w">                                                              </span>&gt;<span class="w"> </span>Third<span class="w"> </span>line
+</code></pre></div>
+<h4 id="_11">長いファイルの参照</h4>
+<p><code>less</code>や<a href="https://github.com/sharkdp/bat/blob/master/doc/README-ja.md">bat</a>のようなページャを使用するのが普通だが、他にもいくつか方法がある。</p>
+<ul>
+<li><code>head</code> ファイルの先頭行を表示<ul>
+<li>ex. <code>head -5 [file]</code> fileの5行目まで表示</li>
+</ul>
+</li>
+<li><code>tail -f</code> 最終行から数行表示するコマンド + <code>-f</code> ライブアップデート出力<ul>
+<li>ex. <code>tail -f [file]</code></li>
+</ul>
+</li>
 </ul>
 <div class="footnote">
 <hr />

@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kokshi.github.io/publish-doc/future_development/">
+        <link rel="canonical" href="https://kokshi.github.io/publish-doc/esxi_optiplex/">
       
       
       
@@ -17,7 +17,7 @@
     
     
       
-        <title>やりたいことリスト - こくしラボ</title>
+        <title>Vmware ESXiをOptiplex 7050にインストールする - こくしラボ</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#vmware-esxioptiplex-7050" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              やりたいことリスト
+              Vmware ESXiをOptiplex 7050にインストールする
             
           </span>
         </div>
@@ -594,31 +594,126 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    アプリケーション
+  <a href="#_1" class="md-nav__link">
+    概要
   </a>
   
-    <nav class="md-nav" aria-label="アプリケーション">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    インストーラの作成
+  </a>
+  
+    <nav class="md-nav" aria-label="インストーラの作成">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#esxi" class="md-nav__link">
+    ESXiのダウンロード
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    組み込み
+    コミュニティドライバの入手
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-server" class="md-nav__link">
-    API Server
+  <a href="#_4" class="md-nav__link">
+    カスタムイメージの作成
+  </a>
+  
+    <nav class="md-nav" aria-label="カスタムイメージの作成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powercli" class="md-nav__link">
+    PowerCLIの準備
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#frontend" class="md-nav__link">
-    Frontend
+  <a href="#_5" class="md-nav__link">
+    イメージの作成
   </a>
+  
+    <nav class="md-nav" aria-label="イメージの作成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powershel" class="md-nav__link">
+    PowerShelでの実行ポリシーを変更
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-esxsoftwaredepot-esxi" class="md-nav__link">
+    Add-EsxSoftwareDepot で ESXi インストールイメージのインポート
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    イメージプロファイルの取り込み
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ドライバの取り込み／確認
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    カスタムしたイメージプロファイルの作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zipiso" class="md-nav__link">
+    カスタムインストーラをZIPとISOでエクスポート
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb" class="md-nav__link">
+    USBメモリに展開
+  </a>
+  
+    <nav class="md-nav" aria-label="USBメモリに展開">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    システム領域サイズのカスタマイズ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -628,29 +723,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ネットワークインフラ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    サーバーインフラ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    監視
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    その他
+  <a href="#_10" class="md-nav__link">
+    インストール
   </a>
   
 </li>
@@ -673,81 +747,166 @@
   
 
 
-<h1 id="_1">やりたいことリスト</h1>
-<h2 id="_2">アプリケーション</h2>
-<h3 id="_3">組み込み</h3>
+<h1 id="vmware-esxioptiplex-7050">Vmware ESXiをOptiplex 7050にインストールする</h1>
+<h2 id="_1">概要</h2>
+<p>次の環境でESXiを立ち上げます。</p>
 <ul>
-<li>IoTとサーバーの通信<ul>
-<li>Protobuf化<ul>
-<li>c: nanopb</li>
-<li>python: 純正protobuf<ul>
-<li>protoc環境構築</li>
+<li>Optiplex 7050 マイクロフォームファクター(ヤフオクで購入)</li>
+<li>Crucial SSD P3 NVMe</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>TCP<ul>
-<li>単一セッション</li>
-<li>使い捨てる</li>
-<li>コマンド的</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="api-server">API Server</h3>
+<p>ESXiは無償版(https://customerconnect.vmware.com/jp/evalcenter?p=free-esxi7)を利用します。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<h2 id="_2">インストーラの作成</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>こちらを参考にしました。
+<a href="https://github.com/tuna-jp/ouchi-cloud/blob/main/vol3/02_esxi_custom_installer.md">はじめよう、おうちクラウド - ESXi インストーラの作成</a></p>
+</div>
+<h3 id="esxi">ESXiのダウンロード</h3>
+<p><a href="https://customerconnect.vmware.com/jp/evalcenter?p=free-esxi7">VMware vSphere Hypervisor 7.0 ダウンロード センター</a>から入手します。VMware Customer Connectアカウントの登録と、評価版利用のための登録が必要でした。</p>
+<p>Optiplex 7050のオンボードNICはおそらく標準のISOファイル(VMware vSphere Hypervisor (ESXi ISO) image)でも大丈夫です。今回はNVMe SSDがドライバ対応していないのでVMware vSphere Hypervisor (ESXi) Offline Bundleをダウンロードします。</p>
+<p>今回インストールするバージョンは<code>7.0U3g</code>です。</p>
+<h3 id="_3">コミュニティドライバの入手</h3>
+<p>NVMe Driverは適用が必要です。保険でNetworking Driverも入れておきます。</p>
 <ul>
-<li>FastAPI<ul>
-<li>Python</li>
+<li><a href="https://flings.vmware.com/community-nvme-driver-for-esxi">Community NVMe Driver for ESXi</a><ul>
+<li>Version 1.2</li>
 </ul>
 </li>
-<li>socket.io<ul>
-<li>非同期的(not リクエスト-レスポンス)を真面目にやりたくない</li>
-<li>技術の選定させないでほしい</li>
-</ul>
-</li>
-</ul>
-<h3 id="frontend">Frontend</h3>
-<ul>
-<li>vue<ul>
-<li>せっかく会社でやってんだから一回やっておきたい</li>
-<li>vue-router<ul>
-<li>めんどくね？</li>
-</ul>
-</li>
-<li>vuetify</li>
-<li>とりあえず学習コストもあるしSSRなしでやっておきたい</li>
+<li><a href="https://flings.vmware.com/community-networking-driver-for-esxi">Community Networking Driver for ESXi</a><ul>
+<li>version 1.2.7 </li>
 </ul>
 </li>
 </ul>
-<h2 id="_4">ネットワークインフラ</h2>
-<ul>
-<li>PPPoEとの併用をやめる</li>
-<li>すべてはVPNで接続(Tailscale)<ul>
-<li>踏み台があれば特別なことはする必要ない</li>
-</ul>
-</li>
-</ul>
-<h2 id="_5">サーバーインフラ</h2>
-<ul>
-<li>Proxmox or ESXi</li>
-<li>クラスタ化</li>
-<li>NASは分離</li>
-</ul>
-<p>https://hchch.net/2021-nas2/</p>
+<h3 id="_4">カスタムイメージの作成</h3>
+<p>ESXi本体とコミュニティドライバを合体させ、カスタムイメージを作成します。<a href="https://www.powershellgallery.com/packages/VMware.PowerCLI/13.1.0.21624340">PowerCLI Image Builder</a>というPowerShell用のツールを利用します。</p>
+<h4 id="powercli">PowerCLIの準備</h4>
+<p>PowerCLIはPowerShellを管理者で起動したあと次のコマンドを実行することでインストール出来ます。</p>
+<div class="highlight"><pre><span></span><code>PS<span class="w"> </span>&gt;<span class="w"> </span>Install-Module<span class="w"> </span>-Name<span class="w"> </span>VMware.PowerCLI<span class="w">  </span>
+PS<span class="w"> </span>&gt;<span class="w"> </span>Get-Module<span class="w"> </span>VMware.PowerCLI<span class="w"> </span>-ListAvailable
+<span class="w">    </span>ディレクトリ:<span class="w"> </span>C:<span class="se">\P</span>rogram<span class="w"> </span>Files<span class="se">\W</span>indowsPowerShell<span class="se">\M</span>odules
+ModuleType<span class="w"> </span>Version<span class="w">    </span>Name<span class="w">                                </span>ExportedCommands
+----------<span class="w"> </span>-------<span class="w">    </span>----<span class="w">                                </span>----------------
+Manifest<span class="w">   </span><span class="m">13</span>.1.0....<span class="w"> </span>VMware.PowerCLI
+</code></pre></div>
+<p>PowerCLI 13.0では、VMware.ImageBuilderモジュールを利用するためにPython3.7といくつかのライブラリが必要です。</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>こちらを参考にしました。
+<a href="https://developer.vmware.com/docs/15315/powercli-user-s-guide/GUID-9081EBAF-BF85-48B1-82A0-D1C49F3FF1E8.html">Installing and Configuring Python for PowerCLI</a></p>
+</div>
+<p>Python3.7を<a href="https://www.python.org/downloads/release/python-379/">Download Python | Python.org</a>から入手し、インストールします。Windowsの場合は、デフォルトで次の場所にインストールされます。</p>
+<div class="highlight"><pre><span></span><code>%USERPROFILE%\AppData\Local\Programs\Python\Python37
+</code></pre></div>
+<p>pipを利用して<code>six</code> <code>psutil</code> <code>lxml</code> <code>pyopenssl</code> をインストールします。インストールしたPython3.7のpipを利用します。</p>
+<div class="highlight"><pre><span></span><code>PS<span class="w"> </span>&gt;<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\[</span>USERNAME<span class="o">]</span><span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\P</span>rograms<span class="se">\P</span>ython<span class="se">\P</span>ython37<span class="se">\S</span>cripts<span class="se">\p</span>ip.exe<span class="w"> </span>install<span class="w"> </span>six<span class="w"> </span>psutil<span class="w"> </span>lxml<span class="w"> </span>pyopenssl
+</code></pre></div>
+<p>PowerCLIにインストールしたPythonのパスを設定します。</p>
+<div class="highlight"><pre><span></span><code>PS<span class="w"> </span>&gt;<span class="w"> </span>Set-PowerCLIConfiguration<span class="w"> </span>-PythonPath<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\[</span>USERNAME<span class="o">]</span><span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\P</span>rograms<span class="se">\P</span>ython<span class="se">\P</span>ython37<span class="se">\p</span>ython.exe<span class="w"> </span>-Scope<span class="w"> </span>User
+</code></pre></div>
+<p>設定後はPowerShelを再起動します。</p>
+<h4 id="_5">イメージの作成</h4>
+<p>フォルダ構成は次のとおりになっています。</p>
+<div class="highlight"><pre><span></span><code>PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span>dir
+
+
+<span class="w">    </span>ディレクトリ:<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller
+
+
+Mode<span class="w">                 </span>LastWriteTime<span class="w">         </span>Length<span class="w"> </span>Name
+----<span class="w">                 </span>-------------<span class="w">         </span>------<span class="w"> </span>----
+-a----<span class="w">        </span><span class="m">2023</span>/05/03<span class="w">     </span><span class="m">13</span>:26<span class="w">         </span><span class="m">229802</span><span class="w"> </span>Net-Community-Driver_1.2.7.0-1vmw.700.1.0.15843807_19480755.zip
+-a----<span class="w">        </span><span class="m">2023</span>/05/03<span class="w">     </span><span class="m">13</span>:27<span class="w">          </span><span class="m">98560</span><span class="w"> </span>nvme-community-driver_1.0.1.0-3vmw.700.1.0.15843807-component-18902434.zip
+-a----<span class="w">        </span><span class="m">2023</span>/05/03<span class="w">     </span><span class="m">13</span>:26<span class="w">      </span><span class="m">381466339</span><span class="w"> </span>VMware-ESXi-7.0U3g-20328353-depot.zip
+</code></pre></div>
+<h5 id="powershel">PowerShelでの実行ポリシーを変更</h5>
+<div class="highlight"><pre><span></span><code>PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span>Get-ExecutionPolicy
+Restricted
+PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span>Set-ExecutionPolicy<span class="w"> </span>RemoteSigned<span class="w"> </span>-Scope<span class="w"> </span>Process
+</code></pre></div>
+<h5 id="add-esxsoftwaredepot-esxi">Add-EsxSoftwareDepot で ESXi インストールイメージのインポート</h5>
+<div class="highlight"><pre><span></span><code>Add-EsxSoftwareDepot<span class="w"> </span>-DepotUrl<span class="w"> </span>.<span class="se">\V</span>Mware-ESXi-7.0U3g-20328353-depot.zip
+Depot<span class="w"> </span>Url
+---------
+zip:D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller<span class="se">\V</span>Mware-ESXi-7.0U3g-20328353-depot.zip?index.xml
+</code></pre></div>
+<h5 id="_6">イメージプロファイルの取り込み</h5>
+<p>-no-tools ではないもの、s や sc でないものを選びます。</p>
+<div class="highlight"><pre><span></span><code>PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span>Get-EsxImageProfile
+
+Name<span class="w">                           </span>Vendor<span class="w">          </span>Last<span class="w"> </span>Modified<span class="w">   </span>Acceptance<span class="w"> </span>Level
+----<span class="w">                           </span>------<span class="w">          </span>-------------<span class="w">   </span>----------------
+ESXi-7.0U3g-20328353-standard<span class="w">  </span>VMware,<span class="w"> </span>Inc.<span class="w">    </span><span class="m">2022</span>/09/01<span class="w"> </span><span class="m">0</span>...<span class="w"> </span>PartnerSupported
+ESXi-7.0U3g-20328353-no-tools<span class="w">  </span>VMware,<span class="w"> </span>Inc.<span class="w">    </span><span class="m">2022</span>/08/23<span class="w"> </span><span class="m">3</span>...<span class="w"> </span>PartnerSupported
+PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span><span class="nv">$ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span>Get-EsxImageProfile<span class="o">)[</span><span class="m">0</span><span class="o">]</span>
+PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$ip</span>
+
+Name<span class="w">                           </span>Vendor<span class="w">          </span>Last<span class="w"> </span>Modified<span class="w">   </span>Acceptance<span class="w"> </span>Level
+----<span class="w">                           </span>------<span class="w">          </span>-------------<span class="w">   </span>----------------
+ESXi-7.0U3g-20328353-standard<span class="w">  </span>VMware,<span class="w"> </span>Inc.<span class="w">    </span><span class="m">2022</span>/09/01<span class="w"> </span><span class="m">0</span>...<span class="w"> </span>PartnerSupported
+</code></pre></div>
+<h5 id="_7">ドライバの取り込み／確認</h5>
+<div class="highlight"><pre><span></span><code>PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span>Add-EsxSoftwareDepot<span class="w"> </span>-DepotUrl<span class="w"> </span>.<span class="se">\N</span>et-Community-Driver_1.2.7.0-1vmw.700.1.0.15843807_19480755.zip
+PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span>Add-EsxSoftwareDepot<span class="w"> </span>-DepotUrl<span class="w"> </span>.<span class="se">\n</span>vme-community-driver_1.0.1.0-3vmw.700.1.0.15843807-component-18902434.zip
+PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span>Get-EsxSoftwarePackage<span class="w">  </span><span class="p">|</span><span class="w"> </span>?<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nv">$_</span>.Name<span class="w"> </span>-like<span class="w"> </span><span class="s1">&#39;*community&#39;</span><span class="w"> </span><span class="o">}</span>
+
+Name<span class="w">                     </span>Version<span class="w">                        </span>Vendor<span class="w">     </span>Creation<span class="w"> </span>Date
+----<span class="w">                     </span>-------<span class="w">                        </span>------<span class="w">     </span>-------------
+nvme-community<span class="w">           </span><span class="m">1</span>.0.1.0-3vmw.700.1.0.15843807<span class="w">  </span>VMW<span class="w">        </span><span class="m">2020</span>/01/08<span class="w"> </span><span class="m">12</span>...
+net-community<span class="w">            </span><span class="m">1</span>.2.7.0-1vmw.700.1.0.15843807<span class="w">  </span>VMW<span class="w">        </span><span class="m">2022</span>/03/10<span class="w"> </span><span class="m">21</span>...
+</code></pre></div>
+<h5 id="_8">カスタムしたイメージプロファイルの作成</h5>
+<div class="highlight"><pre><span></span><code>PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span><span class="nv">$ip2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>New-EsxImageProfile<span class="w"> </span>-CloneProfile<span class="w"> </span><span class="nv">$ip</span><span class="w"> </span>-Name<span class="w"> </span>Optiplex-7050MFF-7.0.u3g<span class="w"> </span>-Vendor<span class="w"> </span>kokshilab<span class="w"> </span>-AcceptanceLevel<span class="w"> </span>CommunitySupported
+PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$ip2</span>
+
+Name<span class="w">                           </span>Vendor<span class="w">          </span>Last<span class="w"> </span>Modified<span class="w">   </span>Acceptance<span class="w"> </span>Level
+----<span class="w">                           </span>------<span class="w">          </span>-------------<span class="w">   </span>----------------
+Optiplex-7050MFF-7.0.u3g<span class="w">       </span>kokshilab<span class="w">       </span><span class="m">2022</span>/09/01<span class="w"> </span><span class="m">0</span>...<span class="w"> </span>CommunitySupported
+PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span>Add-EsxSoftwarePackage<span class="w"> </span>-ImageProfile<span class="w"> </span><span class="nv">$ip2</span><span class="w"> </span>-SoftwarePackage<span class="w"> </span>nvme-community,net-community
+
+Name<span class="w">                           </span>Vendor<span class="w">          </span>Last<span class="w"> </span>Modified<span class="w">   </span>Acceptance<span class="w"> </span>Level
+----<span class="w">                           </span>------<span class="w">          </span>-------------<span class="w">   </span>----------------
+Optiplex-7050MFF-7.0.u3g<span class="w">       </span>kokshilab<span class="w">       </span><span class="m">2023</span>/05/03<span class="w"> </span><span class="m">1</span>...<span class="w"> </span>CommunitySupported
+</code></pre></div>
+<h5 id="zipiso">カスタムインストーラをZIPとISOでエクスポート</h5>
+<div class="highlight"><pre><span></span><code>PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span>Export-EsxImageProfile<span class="w"> </span>-ImageProfile<span class="w"> </span><span class="nv">$ip2</span><span class="w"> </span>./Optiplex-7050MFF-7.0.u3g.zip<span class="w"> </span>-ExportToBundle
+PS<span class="w"> </span>D:<span class="se">\W</span>ORKS<span class="se">\E</span>SXi<span class="se">\I</span>nstaller&gt;<span class="w"> </span>Export-EsxImageProfile<span class="w"> </span>-ImageProfile<span class="w"> </span><span class="nv">$ip2</span><span class="w"> </span>./Optiplex-7050MFF-7.0.u3g.iso<span class="w"> </span>-ExportToIso
+</code></pre></div>
+<h3 id="usb">USBメモリに展開</h3>
+<p>Rufusを利用してUSBメモリに展開します。</p>
+<h4 id="_9">システム領域サイズのカスタマイズ</h4>
+<p>デフォルトだと120GBの領域がシステム領域として確保されてしまうそうなので変更します。</p>
+<p>指定方法 : systemMediaSize=
+* min (33 GB, for single disk or embedded servers)
+* small (69 GB, for servers with at least 512 GB RAM)
+* default (138 GB)
+* max (consume all available space, for multi-terabyte servers)</p>
+<p>USBメモリにイメージを展開後、<code>boot.cfg</code>を変更します。</p>
+<div class="highlight"><pre><span></span><code>bootstate=0
+title=Loading ESXi installer
+timeout=5
+prefix=
+kernel=/b.b00
+kernelopt=runweasel cdromBoot systemMediaSize=min # systemMediaSize=min を追加
+modules=(中略)
+updated=0
+</code></pre></div>
+<h2 id="_10">インストール</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>こちらを参考にしました。
+<a href="https://github.com/tuna-jp/ouchi-cloud/blob/main/vol3/03_esxi_setup.md">はじめよう、おうちクラウド - ESXiのインストールと基本設定</a></p>
+</div>
+<p>上記の手順でインストールしました。この手順だけだとNVMe SSDが認識されなかったため一部BIOSの設定を変更しました。RAIDモードに設定されている場合は動作しません。</p>
+<p><img src="./img/esxi_optiplex/optiplex_bios.jpg" width="500"></p>
+<p>基本的には手順に沿ってインストールを行います。インストールが終わり、再起動後に固定IPの設定を投入しました。デフォルトではDHCPですが、割り当てられたIPアドレスが画面に表示されるため設定を入れずとも管理Webページにはアクセスできます。</p>
+<div class="footnote">
 <hr />
-<h2 id="_6">監視</h2>
-<ul>
-<li>Prometheus + Grafana</li>
-</ul>
-<h2 id="_7">その他</h2>
-<ul>
-<li>SPRESENSE<ul>
-<li>nuttx</li>
-<li>Debug : JTAG : https://akizukidenshi.com/catalog/g/gK-06503/</li>
-</ul>
+<ol>
+<li id="fn:1">
+<p>評価版ESXi 8 (https://customerconnect.vmware.com/jp/evalcenter?p=vsphere-eval-8) ではないので注意&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
-</ul>
+</ol>
+</div>
 
 
 

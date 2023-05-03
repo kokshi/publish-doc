@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://kokshi.github.io/publish-doc/future_development/">
+        <link rel="canonical" href="https://kokshi.github.io/publish-doc/room_network/">
       
       
       
@@ -17,7 +17,7 @@
     
     
       
-        <title>やりたいことリスト - こくしラボ</title>
+        <title>自宅ネットワークをIX2215とCRS305で構築する - こくしラボ</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#ix2215crs305" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              やりたいことリスト
+              自宅ネットワークをIX2215とCRS305で構築する
             
           </span>
         </div>
@@ -594,30 +594,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    アプリケーション
+  <a href="#_1" class="md-nav__link">
+    概要
   </a>
   
-    <nav class="md-nav" aria-label="アプリケーション">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20230501" class="md-nav__link">
+    現状(2023/05/01)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    構築条件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ix2215-ipoe" class="md-nav__link">
+    IX2215 - IPoEの設定
+  </a>
+  
+    <nav class="md-nav" aria-label="IX2215 - IPoEの設定">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    組み込み
+  <a href="#ra-router-advertisement" class="md-nav__link">
+    RA (Router Advertisement)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api-server" class="md-nav__link">
-    API Server
+  <a href="#map-e" class="md-nav__link">
+    MAP-E
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#frontend" class="md-nav__link">
-    Frontend
+  <a href="#nd" class="md-nav__link">
+    NDプロキシ
   </a>
   
 </li>
@@ -628,29 +649,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ネットワークインフラ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    サーバーインフラ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    監視
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    その他
+  <a href="#_3" class="md-nav__link">
+    参考文献
   </a>
   
 </li>
@@ -673,81 +673,52 @@
   
 
 
-<h1 id="_1">やりたいことリスト</h1>
-<h2 id="_2">アプリケーション</h2>
-<h3 id="_3">組み込み</h3>
+<h1 id="ix2215crs305">自宅ネットワークをIX2215とCRS305で構築する</h1>
+<p>Created: 2023/05/01</p>
+<h2 id="_1">概要</h2>
+<p>NEC IX2215ルーターとMikrotik CRS305 10GbE スイッチを使用して自宅ネットワークを構築します。</p>
+<h2 id="20230501">現状(2023/05/01)</h2>
+<p><img alt="room-network.drawio" src="../img/room-network.drawio.svg" /></p>
+<h2 id="_2">構築条件</h2>
 <ul>
-<li>IoTとサーバーの通信<ul>
-<li>Protobuf化<ul>
-<li>c: nanopb</li>
-<li>python: 純正protobuf<ul>
-<li>protoc環境構築</li>
+<li>IPv4 over IPv6(MAP-E方式)で接続</li>
+<li>VLANはとりあえず無し</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>TCP<ul>
-<li>単一セッション</li>
-<li>使い捨てる</li>
-<li>コマンド的</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="api-server">API Server</h3>
+<h2 id="ix2215-ipoe">IX2215 - IPoEの設定</h2>
+<p><a href="https://jpn.nec.com/univerge/ix/Support/ipv6/v6plus-mape/index.html">UNIVERGE IXシリーズ v6プラス （MAP-E方式） 設定ガイド</a>の「設定例2 v6プラス（MAP-E方式）の設定 - IPv6 RA」を参考に設定を投入します。</p>
+<p>の前に、IPv6に関するいくつかの技術を理解しておきます。</p>
+<h4 id="ra-router-advertisement">RA (Router Advertisement)</h4>
+<blockquote>
+<p>RA (Router Advertisement; ルータ広告)とは、 IPv6アドレスの自動設定を行う機能(Stateless Address Autoconfiguration, SLAAC)(*1)の一部分で、 RFC4862で標準化されています。 <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+</blockquote>
+<p>IPv6のアドレスの自動設定を行います。ざっくりな理解だと、RS(Router Solicitation, ルータ要請) メッセージをホスト、つまりIPv6アドレスを要求する側が発行し、RSメッセージを受信したルータは<strong>IPv6のプレフィックス</strong>などをRA(Router Advertisement)メッセージに入れて発行します。RAメッセージを受信したホストはプレフィックスとインターフェースIDを組み合わせ自分のアドレスを生成します。</p>
+<p><img alt="img" src="https://www.infraexpert.com/studygif/ipv6z21.gif" /></p>
+<p>出典: <a href="https://www.infraexpert.com/study/ipv6z5.html">ネットワークエンジニアとして IPv6ホストのアドレス設定（ステートレス、ステートフル、DHCPv6）</a></p>
+<h4 id="map-e">MAP-E</h4>
+<p>IPv4 over IPv6を実現するための方式の一つです。IPv4 over IPv6は基本的にIPv6のパケットでIPv4のパケットをカプセル化することで実現します。</p>
+<p>MAP-Eでは、通信事業者側に <strong>MAP BE(border Relay) ルーター</strong> 、ユーザー宅内に <strong>MAP CE(Customer Edge)ルーター</strong> を利用します。基本的にはそれぞれのルーターがIPv4のパケットをIPv6でカプセル化し、IPv4インターネットに送る際にIPv4パケットを取り出してから送信します。</p>
+<p>このとき、<strong>各CEルーターに割り当てるグローバルIPv4アドレスは複数のCEルーターで共有</strong>できます。しかし、共有すると送信元が誰なのかわからなくなってしまうため、<strong>トランスポート層プロトコル(TCPなど)のポート番号を利用してユーザを識別</strong>します。0~65535の範囲の一部、例えば次のような範囲をユーザーそれぞれに割り当てます。</p>
+<div class="highlight"><pre><span></span><code>  NAPT translation port:
+    4144-4159, 8240-8255, 12336-12351, ...
+</code></pre></div>
+<p><img alt="img" src="https://ascii.jp/img/2020/09/30/3100533/l/c69da19db0cf23d0.jpg" /></p>
+<p>出典: <a href="https://ascii.jp/elem/000/004/028/4028566/3/">サイト管理者や開発者が知っておきたい「IPv4/IPv6共存技術」 (3/3)</a></p>
+<h4 id="nd">NDプロキシ</h4>
+<p>https://nanbu.marune205.net/2021/12/whats-nd-proxy.html?m=1</p>
+<h2 id="_3">参考文献</h2>
 <ul>
-<li>FastAPI<ul>
-<li>Python</li>
+<li><a href="https://jpn.nec.com/univerge/ix/Support/ipv6/v6plus-mape/index.html">v6プラス （MAP-E方式） 設定ガイド</a></li>
+<li><a href="https://tailscale.com/">Tailscale · Best VPN Service for Secure Networks</a></li>
+<li><a href="https://www.gwtcenter.com/how-to-use-tailscale">Tailscaleの使い方：概要</a></li>
 </ul>
-</li>
-<li>socket.io<ul>
-<li>非同期的(not リクエスト-レスポンス)を真面目にやりたくない</li>
-<li>技術の選定させないでほしい</li>
-</ul>
-</li>
-</ul>
-<h3 id="frontend">Frontend</h3>
-<ul>
-<li>vue<ul>
-<li>せっかく会社でやってんだから一回やっておきたい</li>
-<li>vue-router<ul>
-<li>めんどくね？</li>
-</ul>
-</li>
-<li>vuetify</li>
-<li>とりあえず学習コストもあるしSSRなしでやっておきたい</li>
-</ul>
-</li>
-</ul>
-<h2 id="_4">ネットワークインフラ</h2>
-<ul>
-<li>PPPoEとの併用をやめる</li>
-<li>すべてはVPNで接続(Tailscale)<ul>
-<li>踏み台があれば特別なことはする必要ない</li>
-</ul>
-</li>
-</ul>
-<h2 id="_5">サーバーインフラ</h2>
-<ul>
-<li>Proxmox or ESXi</li>
-<li>クラスタ化</li>
-<li>NASは分離</li>
-</ul>
-<p>https://hchch.net/2021-nas2/</p>
+<div class="footnote">
 <hr />
-<h2 id="_6">監視</h2>
-<ul>
-<li>Prometheus + Grafana</li>
-</ul>
-<h2 id="_7">その他</h2>
-<ul>
-<li>SPRESENSE<ul>
-<li>nuttx</li>
-<li>Debug : JTAG : https://akizukidenshi.com/catalog/g/gK-06503/</li>
-</ul>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.nic.ad.jp/ja/basics/terms/ra.html"> インターネット用語1分解説～RA (RouterAdvertisement; ルータ広告) とは～ - JPNIC</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
-</ul>
+</ol>
+</div>
 
 
 

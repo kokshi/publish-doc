@@ -14,7 +14,7 @@
         <link rel="prev" href="../proxmox/">
       
       
-        <link rel="next" href="../other/learning_modern_linux/3_script/">
+        <link rel="next" href="../room_network/">
       
       <link rel="icon" href="../img/favicon.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
@@ -650,6 +650,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../room_network/" class="md-nav__link">
+        自宅ネットワーク
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -944,7 +958,7 @@
 <li>Optiplex 7050 マイクロフォームファクター(ヤフオクで購入)</li>
 <li>Crucial SSD P3 NVMe</li>
 </ul>
-<p>ESXiは無償版(https://customerconnect.vmware.com/jp/evalcenter?p=free-esxi7)を利用します。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<p>ESXiは<a href="https://customerconnect.vmware.com/jp/evalcenter?p=free-esxi7">無償版</a>を利用します。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
 <h2 id="_2">インストーラの作成</h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1087,8 +1101,10 @@ updated=0
 <a href="https://github.com/tuna-jp/ouchi-cloud/blob/main/vol3/03_esxi_setup.md">はじめよう、おうちクラウド - ESXiのインストールと基本設定</a></p>
 </div>
 <p>上記の手順でインストールしました。この手順だけだとNVMe SSDが認識されなかったため一部BIOSの設定を変更しました。RAIDモードに設定されている場合は動作しません。</p>
-<p><img src="./img/esxi_optiplex/optiplex_bios.jpg" width="500"></p>
+<p><img src="img/esxi_optiplex/optiplex_bios.jpg" width="500"></p>
 <p>基本的には手順に沿ってインストールを行います。インストールが終わり、再起動後に固定IPの設定を投入しました。デフォルトではDHCPですが、割り当てられたIPアドレスが画面に表示されるため設定を入れずとも管理Webページにはアクセスできます。</p>
+<p>管理UIにアクセスできたらインストール完了です。</p>
+<p><img src="img/esxi_optiplex/esxi_ui.png" width="500"></p>
 <div class="footnote">
 <hr />
 <ol>
@@ -1139,13 +1155,13 @@ updated=0
         
         
           
-          <a href="../other/learning_modern_linux/3_script/" class="md-footer__link md-footer__link--next" aria-label="次: 第3章" rel="next">
+          <a href="../room_network/" class="md-footer__link md-footer__link--next" aria-label="次: 自宅ネットワーク" rel="next">
             <div class="md-footer__title">
               <div class="md-ellipsis">
                 <span class="md-footer__direction">
                   次
                 </span>
-                第3章
+                自宅ネットワーク
               </div>
             </div>
             <div class="md-footer__button md-icon">

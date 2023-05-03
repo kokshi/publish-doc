@@ -8,23 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://kokshi.github.io/publish-doc/document/">
+        <link rel="canonical" href="https://kokshi.github.io/publish-doc/infra/proxmox/">
       
       
+        <link rel="prev" href="../../pipenv/">
       
-      <link rel="icon" href="../img/favicon.svg">
+      
+        <link rel="next" href="../esxi_optiplex/">
+      
+      <link rel="icon" href="../../img/favicon.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>概要 - こくしラボ</title>
+        <title>Proxmox VE - こくしラボ</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4a75a56.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -42,9 +46,9 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#proxmox" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -83,7 +87,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
-    <a href=".." title="こくしラボ" class="md-header__button md-logo" aria-label="こくしラボ" data-md-component="logo">
+    <a href="../.." title="こくしラボ" class="md-header__button md-logo" aria-label="こくしラボ" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>
@@ -102,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              概要
+              Proxmox VE
             
           </span>
         </div>
@@ -177,7 +181,7 @@
 
 
   <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       はじめに
     </a>
   </li>
@@ -192,7 +196,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../mkdocs/" class="md-tabs__link">
+      <a href="../../mkdocs/" class="md-tabs__link">
         Documentation
       </a>
     </li>
@@ -208,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../pipenv/" class="md-tabs__link">
+      <a href="../../pipenv/" class="md-tabs__link">
         Application
       </a>
     </li>
@@ -218,13 +222,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../infra/proxmox/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Infrastructure
       </a>
     </li>
@@ -245,7 +251,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../other/learning_modern_linux/3_script/" class="md-tabs__link">
+      <a href="../../other/learning_modern_linux/3_script/" class="md-tabs__link">
         Other
       </a>
     </li>
@@ -275,7 +281,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="こくしラボ" class="md-nav__button md-logo" aria-label="こくしラボ" data-md-component="logo">
+    <a href="../.." title="こくしラボ" class="md-nav__button md-logo" aria-label="こくしラボ" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>
@@ -306,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         はじめに
       </a>
     </li>
@@ -350,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mkdocs/" class="md-nav__link">
+      <a href="../../mkdocs/" class="md-nav__link">
         mkdocs
       </a>
     </li>
@@ -401,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipenv/" class="md-nav__link">
+      <a href="../../pipenv/" class="md-nav__link">
         pipenv
       </a>
     </li>
@@ -421,16 +427,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
@@ -439,7 +445,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Infrastructure
@@ -450,11 +456,106 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../infra/proxmox/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Proxmox VE
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Proxmox VE
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    できること
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    特徴
+  </a>
+  
+    <nav class="md-nav" aria-label="特徴">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esxi-vsphere-hypervisor" class="md-nav__link">
+    ESXi 無償版(vSphere Hypervisor)との比較
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    検討
+  </a>
+  
+    <nav class="md-nav" aria-label="検討">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proxmoxtruenas" class="md-nav__link">
+    Proxmox上にTrueNASは構築できるのか？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ファイルサーバー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -466,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infra/esxi_optiplex/" class="md-nav__link">
+      <a href="../esxi_optiplex/" class="md-nav__link">
         ESXi + Dell Optiplex 7050
       </a>
     </li>
@@ -480,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infra/room_network/" class="md-nav__link">
+      <a href="../room_network/" class="md-nav__link">
         IX2215 IPoE(v6プラス, MAP-E方式)で接続する
       </a>
     </li>
@@ -494,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infra/room_network/" class="md-nav__link">
+      <a href="../room_network/" class="md-nav__link">
         自宅ネットワーク
       </a>
     </li>
@@ -574,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../other/learning_modern_linux/3_script/" class="md-nav__link">
+      <a href="../../other/learning_modern_linux/3_script/" class="md-nav__link">
         第3章
       </a>
     </li>
@@ -595,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../other/test/" class="md-nav__link">
+      <a href="../../other/test/" class="md-nav__link">
         test
       </a>
     </li>
@@ -629,6 +730,75 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    できること
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    特徴
+  </a>
+  
+    <nav class="md-nav" aria-label="特徴">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esxi-vsphere-hypervisor" class="md-nav__link">
+    ESXi 無償版(vSphere Hypervisor)との比較
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    検討
+  </a>
+  
+    <nav class="md-nav" aria-label="検討">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proxmoxtruenas" class="md-nav__link">
+    Proxmox上にTrueNASは構築できるのか？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ファイルサーバー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -645,8 +815,44 @@
   
 
 
-<h1 id="_1">概要</h1>
-<p>個人的なメモと技術文書が置かれています。</p>
+<h1 id="proxmox">Proxmox</h1>
+<p><a href="https://www.proxmox.com/en/">Proxmox VE</a>とは、サーバー仮想化のためプラットフォームです。</p>
+<h2 id="_1">できること</h2>
+<ul>
+<li><a href="https://ja.wikipedia.org/wiki/Kernel-based_Virtual_Machine">KVM</a>を利用した仮想マシン</li>
+<li><a href="https://ja.wikipedia.org/wiki/LXC">LXC (Linux Containers)</a>を利用したコンテナ管理</li>
+</ul>
+<p>等々</p>
+<h2 id="_2">特徴</h2>
+<p>ベースがDebianで、Linuxが動くハードウェアなら大体動くので嬉しい。また、ライセンスフリーで無償版でもおおよその機能をほぼ全て使える。</p>
+<h3 id="esxi-vsphere-hypervisor">ESXi 無償版(vSphere Hypervisor)との比較</h3>
+<ul>
+<li>ESXiはベアメタルハイパーバイザー</li>
+<li>OSSではなくVMwareの製品</li>
+<li>ESXiの方がGUIがちゃんとしているらしい</li>
+<li>ダウンロードに無償ライセンスがいる</li>
+</ul>
+<h2 id="_3">検討</h2>
+<h3 id="proxmoxtruenas">Proxmox上にTrueNASは構築できるのか？</h3>
+<p><a href="https://www.truenas.com/community/threads/proxmox-w-truenas-vs-truenas-scale.98759/">Proxmox W/TrueNAS vs TrueNAS SCALE?</a></p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>ストレージ周りをどうすればいいか不明。RAID(ZFS)をどうやって構築するかによるのか？</p>
+</div>
+<h3 id="_4">ファイルサーバー</h3>
+<p>仮想マシン上でファイルサーバーを動かすのはもしかしたらベストな選択肢ではないかもしれない。</p>
+<ol>
+<li>ZFS(RAID)は可能</li>
+<li>ZFSを仮想マシンが直接操作はできない</li>
+<li>ファイルサーバーを仮想マシンに立てることは可能</li>
+<li>ファイルサーバー用OSを仮想マシン上に立てることは可能だが、意味があるのか</li>
+<li>Proxmox上にファイルサーバーを立てることは可能だが、設定アップしなければならない</li>
+</ol>
+<h2 id="_5">参考</h2>
+<ul>
+<li><a href="https://internet.watch.impress.co.jp/docs/column/shimizu/1442466.html">GPUパススルーも簡単にできる仮想化プラットフォーム「Proxmox VE」</a></li>
+<li><a href="https://blog.nishi.network/2020/08/12/proxmox-part1/">お家で始める仮想化環境 Proxmox VE 環境構築編</a></li>
+</ul>
 
 
 
@@ -668,6 +874,42 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+          
+          <a href="../../pipenv/" class="md-footer__link md-footer__link--prev" aria-label="前: pipenv" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  前
+                </span>
+                pipenv
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../esxi_optiplex/" class="md-footer__link md-footer__link--next" aria-label="次: ESXi + Dell Optiplex 7050" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  次
+                </span>
+                ESXi + Dell Optiplex 7050
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -715,10 +957,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
     
   </body>

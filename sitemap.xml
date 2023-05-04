@@ -61,6 +61,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kokshi.github.io/publish-doc/infra/tailscale/</loc>
+         <lastmod>2023-05-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kokshi.github.io/publish-doc/other/test/</loc>
          <lastmod>2023-05-04</lastmod>
          <changefreq>daily</changefreq>

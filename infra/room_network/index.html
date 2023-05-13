@@ -583,7 +583,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dhcp-server" class="md-nav__link">
+    DHCP Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    アプリケーション用の設定
+  </a>
+  
+    <nav class="md-nav" aria-label="アプリケーション用の設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plex-media-server" class="md-nav__link">
+    Plex Media Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     参考文献
   </a>
   
@@ -767,7 +794,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dhcp-server" class="md-nav__link">
+    DHCP Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    アプリケーション用の設定
+  </a>
+  
+    <nav class="md-nav" aria-label="アプリケーション用の設定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plex-media-server" class="md-nav__link">
+    Plex Media Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     参考文献
   </a>
   
@@ -806,7 +860,20 @@
 </ul>
 <h2 id="ipoe">IPoEの設定</h2>
 <p><a href="infra/ix2215_ipoe">IX2215 IPoE(v6プラス, MAP-E方式)で接続する</a></p>
-<h2 id="_3">参考文献</h2>
+<h2 id="dhcp-server">DHCP Server</h2>
+<p><code>192.168.10.10 - 192.168.10.99</code>の範囲でアドレスを割り振ります。デフォルトゲートウェイは設定せず、インターフェースのIPアドレスにします。DNSサーバーは今後足したいと思っています。</p>
+<div class="highlight"><pre><span></span><code>ip dhcp profile dhcpv4-sv
+  assignable-range 192.168.10.10 192.168.10.99
+  fixed-assignment 192.168.10.180 xx:xx:xx:xx:xx:xx
+</code></pre></div>
+<h2 id="_3">アプリケーション用の設定</h2>
+<h3 id="plex-media-server">Plex Media Server</h3>
+<p>File Server (Truenas) にPlexを置いています。リモートアクセスを実現するためポート開放を行います。</p>
+<p>多分MAP-Eのトンネルに設定されている静的NAPTを追加すれば行けるはずです。</p>
+<div class="highlight"><pre><span></span><code>interface Tunnel0.0
+  ip napt static 192.168.10.100 tcp 32816
+</code></pre></div>
+<h2 id="_4">参考文献</h2>
 <ul>
 <li><a href="https://jpn.nec.com/univerge/ix/Support/ipv6/v6plus-mape/index.html">v6プラス （MAP-E方式） 設定ガイド</a></li>
 <li><a href="https://tailscale.com/">Tailscale · Best VPN Service for Secure Networks</a></li>

@@ -8,27 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://kokshi.github.io/publish-doc/pipenv/">
+        <link rel="canonical" href="https://kokshi.github.io/publish-doc/app/influxdb/">
       
       
-        <link rel="prev" href="../mkdocs/">
+        <link rel="prev" href="../../pipenv/">
       
       
-        <link rel="next" href="../app/influxdb/">
+        <link rel="next" href="../../infra/proxmox/">
       
-      <link rel="icon" href="../img/favicon.svg">
+      <link rel="icon" href="../../img/favicon.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>pipenv - こくしラボ</title>
+        <title>InfluxDB - こくしラボ</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.c4a75a56.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4a75a56.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -46,9 +46,9 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pipenvpython" class="md-skip">
+        <a href="#influxdb" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -87,7 +87,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
-    <a href=".." title="こくしラボ" class="md-header__button md-logo" aria-label="こくしラボ" data-md-component="logo">
+    <a href="../.." title="こくしラボ" class="md-header__button md-logo" aria-label="こくしラボ" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              pipenv
+              InfluxDB
             
           </span>
         </div>
@@ -181,7 +181,7 @@
 
 
   <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       はじめに
     </a>
   </li>
@@ -196,7 +196,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../mkdocs/" class="md-tabs__link">
+      <a href="../../mkdocs/" class="md-tabs__link">
         Documentation
       </a>
     </li>
@@ -214,7 +214,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../pipenv/" class="md-tabs__link md-tabs__link--active">
         Application
       </a>
     </li>
@@ -230,7 +230,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../infra/proxmox/" class="md-tabs__link">
+      <a href="../../infra/proxmox/" class="md-tabs__link">
         Infrastructure
       </a>
     </li>
@@ -251,7 +251,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../other/learning_modern_linux/3_script/" class="md-tabs__link">
+      <a href="../../other/learning_modern_linux/3_script/" class="md-tabs__link">
         Other
       </a>
     </li>
@@ -281,7 +281,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="こくしラボ" class="md-nav__button md-logo" aria-label="こくしラボ" data-md-component="logo">
+    <a href="../.." title="こくしラボ" class="md-nav__button md-logo" aria-label="こくしラボ" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>
@@ -312,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         はじめに
       </a>
     </li>
@@ -356,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mkdocs/" class="md-nav__link">
+      <a href="../../mkdocs/" class="md-nav__link">
         mkdocs
       </a>
     </li>
@@ -405,6 +405,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../pipenv/" class="md-nav__link">
+        pipenv
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -417,12 +431,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          pipenv
+          InfluxDB
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        pipenv
+        InfluxDB
       </a>
       
         
@@ -445,59 +459,60 @@
     概要
   </a>
   
-    <nav class="md-nav" aria-label="概要">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    環境
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    #とは
+  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    参考
+    動かす
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pipenv" class="md-nav__link">
-    pipenvの導入
+  <a href="#influx-cli" class="md-nav__link">
+    使う (Influx CLI)
   </a>
   
-    <nav class="md-nav" aria-label="pipenvの導入">
+    <nav class="md-nav" aria-label="使う (Influx CLI)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    仮想環境をプロジェクトディレクトリに作る
+  <a href="#configure-an-influxdb-profile" class="md-nav__link">
+    Configure an InfluxDB profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-or-create-a-bucket" class="md-nav__link">
+    Select or Create a bucket
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-data" class="md-nav__link">
+    Write Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-a-flux-query" class="md-nav__link">
+    Execute a Flux Query
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    プロジェクトの初期化
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ライブラリのインストール
-  </a>
   
 </li>
       
@@ -505,20 +520,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../app/influxdb/" class="md-nav__link">
-        InfluxDB
-      </a>
     </li>
   
 
@@ -567,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infra/proxmox/" class="md-nav__link">
+      <a href="../../infra/proxmox/" class="md-nav__link">
         Proxmox VE
       </a>
     </li>
@@ -581,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infra/esxi_optiplex/" class="md-nav__link">
+      <a href="../../infra/esxi_optiplex/" class="md-nav__link">
         ESXi + Dell Optiplex 7050
       </a>
     </li>
@@ -595,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infra/esxi_cloudinit/" class="md-nav__link">
+      <a href="../../infra/esxi_cloudinit/" class="md-nav__link">
         ESXi + cloud-init
       </a>
     </li>
@@ -609,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infra/ix2215_ipoe/" class="md-nav__link">
+      <a href="../../infra/ix2215_ipoe/" class="md-nav__link">
         IX2215 IPoE(v6プラス, MAP-E方式)で接続する
       </a>
     </li>
@@ -623,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infra/ix2215_initial/" class="md-nav__link">
+      <a href="../../infra/ix2215_initial/" class="md-nav__link">
         IX2215の初期設定
       </a>
     </li>
@@ -637,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../infra/room_network/" class="md-nav__link">
+      <a href="../../infra/room_network/" class="md-nav__link">
         自宅ネットワーク
       </a>
     </li>
@@ -717,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../other/learning_modern_linux/3_script/" class="md-nav__link">
+      <a href="../../other/learning_modern_linux/3_script/" class="md-nav__link">
         第3章
       </a>
     </li>
@@ -738,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../other/test/" class="md-nav__link">
+      <a href="../../other/test/" class="md-nav__link">
         test
       </a>
     </li>
@@ -783,59 +784,60 @@
     概要
   </a>
   
-    <nav class="md-nav" aria-label="概要">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    環境
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    #とは
+  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    参考
+    動かす
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pipenv" class="md-nav__link">
-    pipenvの導入
+  <a href="#influx-cli" class="md-nav__link">
+    使う (Influx CLI)
   </a>
   
-    <nav class="md-nav" aria-label="pipenvの導入">
+    <nav class="md-nav" aria-label="使う (Influx CLI)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    仮想環境をプロジェクトディレクトリに作る
+  <a href="#configure-an-influxdb-profile" class="md-nav__link">
+    Configure an InfluxDB profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-or-create-a-bucket" class="md-nav__link">
+    Select or Create a bucket
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-data" class="md-nav__link">
+    Write Data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execute-a-flux-query" class="md-nav__link">
+    Execute a Flux Query
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    プロジェクトの初期化
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ライブラリのインストール
-  </a>
   
 </li>
       
@@ -857,66 +859,88 @@
   
 
 
-<h1 id="pipenvpython">pipenvを利用したPython環境構築</h1>
-<p>Created: 2023/01/09</p>
+<h1 id="influxdb">InfluxDB</h1>
+<p>Created: 2023/06/15</p>
 <h2 id="_1">概要</h2>
-<p>次の状態を目指します。</p>
+<p>InfluxDBを試しつつ情報を蓄積します。</p>
+<h2 id="_2">#とは</h2>
+<blockquote>
+<p><a href="https://www.influxdata.com/">InfluxDB Times Series Data Platform | InfluxData</a></p>
+<p>InfluxDB.
+It's About Time.
+Manage all types of time series data in a single, purpose-built database. Run at any scale in any environment in the cloud, on-premises, or at the edge.</p>
+</blockquote>
+<p>オープンソースの時系列データベースです。センシングデータなどの時間と紐づいたデータを扱えます。</p>
+<h2 id="_3">動かす</h2>
+<p>Dockerで簡単に動きます。</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8086</span>:8086<span class="w"> </span>-v<span class="w"> </span>myInfluxVolume:/var/lib/influxdb2<span class="w"> </span>-d<span class="w"> </span>-t<span class="w"> </span>influxdb<span class="w"> </span>influxdb:latest
+</code></pre></div>
+<p>セットアップが終わるとGUIが表示されます。</p>
+<p><img alt="alt" src="../img/influxdb_gui.png" /></p>
+<h2 id="influx-cli">使う (Influx CLI)</h2>
+<p>Dockerコンテナにクライアントが入っています。</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>influxdb<span class="w"> </span>influx<span class="w"> </span>version
+Influx<span class="w"> </span>CLI<span class="w"> </span>dev<span class="w"> </span><span class="o">(</span>git:<span class="w"> </span>none<span class="o">)</span><span class="w"> </span>build_date:<span class="w"> </span><span class="m">2023</span>-04-28T14:24:14Z
+</code></pre></div>
 <ul>
-<li>vscodeで開発可能</li>
-<li>フォルダ内に仮想環境を持つ<ul>
-<li>ライブラリ等もプロジェクトフォルダに依存する</li>
+<li><code>bucket</code> ... Bucket management commands</li>
+<li><code>export</code> ... Export resources as a template</li>
+<li><code>help</code> ... List all commands</li>
+<li><code>help [command]</code> ... Get help with an individual command</li>
+<li><code>query</code> ... Execute a query</li>
+<li><code>write</code> ... Write points to InfluxDB</li>
 </ul>
-</li>
-</ul>
-<h3 id="_2">環境</h3>
-<ul>
-<li>Windows11</li>
-<li>VSCode</li>
-<li>pipenv</li>
-</ul>
-<h2 id="_3">参考</h2>
-<ul>
-<li><a href="https://qiita.com/y-tsutsu/items/54c10e0b2c6b565c887a">Pipenvを使ったPython開発まとめ</a></li>
-<li><a href="https://zenn.dev/nekoallergy/articles/py-env-pipenv01">【図解】作業が倍速！pipenvの使い方【Python】</a></li>
-<li><a href="https://dev.classmethod.jp/articles/pipenv-venv-setting/">[Python] Pipenvで仮想環境をプロジェクトディレクトリ配下に作る方法</a></li>
-</ul>
-<h2 id="pipenv">pipenvの導入</h2>
-<div class="highlight"><pre><span></span><code><span class="p">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pipenv</span>
+<p>Webクライアントにヘルプがあったので参考にCLIを触ってみます。ここから<code>$ sudo docker exec -it influxdb bash</code>でコンテナ内のシェルで作業します。</p>
+<h3 id="configure-an-influxdb-profile">Configure an InfluxDB profile</h3>
+<p>InfluxDBの接続を構成します。Webクライアントのチュートリアルがサンプルをくれます。</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>influx<span class="w"> </span>config<span class="w"> </span>create<span class="w"> </span>--config-name<span class="w"> </span>onboarding<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--host-url<span class="w"> </span><span class="s2">&quot;http://[InfluxDB_Host]:8086&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--org<span class="w"> </span><span class="s2">&quot;[ORG]&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--token<span class="w"> </span><span class="s2">&quot;[Token]&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--active
+Active<span class="w">  </span>Name<span class="w">            </span>URL<span class="w">                             </span>Org
+*<span class="w">       </span>onboarding<span class="w">      </span>http://<span class="o">[</span>InfluxDB_Host<span class="o">]</span>:8086<span class="w">      </span><span class="o">[</span>ORG<span class="o">]</span>
 </code></pre></div>
-<h3 id="_4">仮想環境をプロジェクトディレクトリに作る</h3>
-<p>環境変数に下記を追加する。</p>
-<table>
-<thead>
-<tr>
-<th>変数</th>
-<th>値</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PIPENV_VENV_IN_PROJECT</td>
-<td>true</td>
-</tr>
-</tbody>
-</table>
-<h2 id="_5">プロジェクトの初期化</h2>
-<p>次のコマンドを実行するとPC内に入っているPythonのバージョンを使用してpipenvの仮想環境がプロジェクトフォルダに作成される。</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pipenv<span class="w"> </span>--python<span class="w"> </span><span class="m">3</span>
+<p><code>--org "[ORG]"</code>はIDではなくNameの方を使いましょう。でないと<code>Error: failed to lookup org with name "[org_id]": 404 Not Found: organization name "[org_id]" not found</code>と怒られます。</p>
+<h3 id="select-or-create-a-bucket">Select or Create a bucket</h3>
+<p>Bucketを作ります。</p>
+<p><img alt="alt" src="../img/influxdb_gui2.png" /></p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>influx<span class="w"> </span>bucket<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>sample-bucket<span class="w"> </span>-c<span class="w"> </span>onboarding
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>[Project Folder]
-┣ .venv/
-┃ ┣ Lib/
-┃ ┣ Scripts/
-┃ ┣ .gitignore
-┃ ┣ .project
-┃ ┗ pyvenv.cfg
-┗ Pipfile
+<h3 id="write-data">Write Data</h3>
+<p>Bucketにデータを書き込みます。サンプルのCSVをAmazon S3に用意してくれている(優しい！)ので使います。</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>influx<span class="w"> </span>write<span class="w"> </span>--bucket<span class="w"> </span>sample-bucket<span class="w"> </span>--url<span class="w"> </span>https://influx-testdata.s3.amazonaws.com/air-sensor-data-annotated.csv
 </code></pre></div>
-<h2 id="_6">ライブラリのインストール</h2>
-<div class="highlight"><pre><span></span><code>$ pipenv install mkdocs
+<p><img alt="alt" src="../img/influxdb_gui3.png" /></p>
+<h3 id="execute-a-flux-query">Execute a Flux Query</h3>
+<p>データベースなのでクエリが存在します。以前はInflux QueryというSQLライクなクエリ言語だったそうですが、<a href="https://docs.influxdata.com/influxdb/latest/reference/syntax/flux/">Flux</a>が新しいバージョン(2.x ~)では主流のようです。</p>
+<p>サンプルスクリプトは下記のとおりです。なんだか見慣れない形ですが、データを処理することに特化しているためこの様になっているみたいです。</p>
+<div class="highlight"><pre><span></span><code>from(bucket: “weather-data”)
+  |&gt; range(start: -10m)
+  |&gt; filter(fn: (r) =&gt; r._measurement == “temperature”)
 </code></pre></div>
-<p>※開発環境のみの場合はこちら</p>
-<div class="highlight"><pre><span></span><code>$ pipenv install --dev mkdocs
+<p>で、CLIで実行するときは次のようなコマンドになります。ワッと結果が出力されます。</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>influx<span class="w"> </span>query<span class="w"> </span><span class="s2">&quot;from(bucket:\&quot;sample-bucket\&quot;) |&gt; range(start:-30m)&quot;</span>
+Result:<span class="w"> </span>_result
+Table:<span class="w"> </span>keys:<span class="w"> </span><span class="o">[</span>_start,<span class="w"> </span>_stop,<span class="w"> </span>_field,<span class="w"> </span>_measurement,<span class="w"> </span>sensor_id<span class="o">]</span>
+<span class="w">                   </span>_start:time<span class="w">                      </span>_stop:time<span class="w">           </span>_field:string<span class="w">     </span>_measurement:string<span class="w">        </span>sensor_id:string<span class="w">                      </span>_time:time<span class="w">                  </span>_value:float
+------------------------------<span class="w">  </span>------------------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>------------------------------<span class="w">  </span>----------------------------
+<span class="m">2023</span>-06-15T14:20:55.732612670Z<span class="w">  </span><span class="m">2023</span>-06-15T14:50:55.732612670Z<span class="w">                      </span>co<span class="w">              </span>airSensors<span class="w">       </span>TLM0100<span class="w">  </span><span class="m">2023</span>-06-15T14:20:56.000000000Z<span class="w">            </span><span class="m">0</span>.6540886812204695
+<span class="m">2023</span>-06-15T14:20:55.732612670Z<span class="w">  </span><span class="m">2023</span>-06-15T14:50:55.732612670Z<span class="w">                      </span>co<span class="w">              </span>airSensors<span class="w">       </span>TLM0100<span class="w">  </span><span class="m">2023</span>-06-15T14:21:06.000000000Z<span class="w">            </span><span class="m">0</span>.6655087367528416
+...
+</code></pre></div>
+<p>集計もできるみたいです。便利～！</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>influx<span class="w"> </span>query<span class="w"> </span><span class="s2">&quot;from(bucket:\&quot;sample-bucket\&quot;) |&gt; range(start:-30m) |&gt; mean()&quot;</span>
+Result:<span class="w"> </span>_result
+Table:<span class="w"> </span>keys:<span class="w"> </span><span class="o">[</span>_start,<span class="w"> </span>_stop,<span class="w"> </span>_field,<span class="w"> </span>_measurement,<span class="w"> </span>sensor_id<span class="o">]</span>
+<span class="w">                   </span>_start:time<span class="w">                      </span>_stop:time<span class="w">           </span>_field:string<span class="w">     </span>_measurement:string<span class="w">        </span>sensor_id:string<span class="w">                  </span>_value:float
+------------------------------<span class="w">  </span>------------------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------------
+<span class="m">2023</span>-06-15T14:22:28.665743801Z<span class="w">  </span><span class="m">2023</span>-06-15T14:52:28.665743801Z<span class="w">                      </span>co<span class="w">              </span>airSensors<span class="w">                 </span>TLM0100<span class="w">            </span><span class="m">0</span>.6622839258689658
+Table:<span class="w"> </span>keys:<span class="w"> </span><span class="o">[</span>_start,<span class="w"> </span>_stop,<span class="w"> </span>_field,<span class="w"> </span>_measurement,<span class="w"> </span>sensor_id<span class="o">]</span>
+<span class="w">                   </span>_start:time<span class="w">                      </span>_stop:time<span class="w">           </span>_field:string<span class="w">     </span>_measurement:string<span class="w">        </span>sensor_id:string<span class="w">                  </span>_value:float
+------------------------------<span class="w">  </span>------------------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------------
+<span class="m">2023</span>-06-15T14:22:28.665743801Z<span class="w">  </span><span class="m">2023</span>-06-15T14:52:28.665743801Z<span class="w">                </span>humidity<span class="w">              </span>airSensors<span class="w">                 </span>TLM0100<span class="w">             </span><span class="m">35</span>.78526123104399
+...
 </code></pre></div>
 
 
@@ -944,7 +968,7 @@
       <nav class="md-footer__inner md-grid" aria-label="フッター" >
         
           
-          <a href="../mkdocs/" class="md-footer__link md-footer__link--prev" aria-label="前: mkdocs" rel="prev">
+          <a href="../../pipenv/" class="md-footer__link md-footer__link--prev" aria-label="前: pipenv" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -953,20 +977,20 @@
                 <span class="md-footer__direction">
                   前
                 </span>
-                mkdocs
+                pipenv
               </div>
             </div>
           </a>
         
         
           
-          <a href="../app/influxdb/" class="md-footer__link md-footer__link--next" aria-label="次: InfluxDB" rel="next">
+          <a href="../../infra/proxmox/" class="md-footer__link md-footer__link--next" aria-label="次: Proxmox VE" rel="next">
             <div class="md-footer__title">
               <div class="md-ellipsis">
                 <span class="md-footer__direction">
                   次
                 </span>
-                InfluxDB
+                Proxmox VE
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1022,10 +1046,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.footer"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
     
   </body>

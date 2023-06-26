@@ -516,6 +516,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    使う (Python)
+  </a>
+  
+    <nav class="md-nav" aria-label="使う (Python)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    接続
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-api" class="md-nav__link">
+    Write API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-api" class="md-nav__link">
+    Query API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -841,6 +875,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    使う (Python)
+  </a>
+  
+    <nav class="md-nav" aria-label="使う (Python)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    接続
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-api" class="md-nav__link">
+    Write API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-api" class="md-nav__link">
+    Query API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -941,6 +1009,57 @@ Table:<span class="w"> </span>keys:<span class="w"> </span><span class="o">[</sp
 ------------------------------<span class="w">  </span>------------------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------------
 <span class="m">2023</span>-06-15T14:22:28.665743801Z<span class="w">  </span><span class="m">2023</span>-06-15T14:52:28.665743801Z<span class="w">                </span>humidity<span class="w">              </span>airSensors<span class="w">                 </span>TLM0100<span class="w">             </span><span class="m">35</span>.78526123104399
 ...
+</code></pre></div>
+<h2 id="python">使う (Python)</h2>
+<p><code>influxdb-client</code>という公式ライブラリがあります。自分の環境にインストールしておきましょう。</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>influxdb-client
+</code></pre></div>
+<h3 id="_4">接続</h3>
+<p>WebUIからトークンを取得します。</p>
+<p><img alt="alt" src="../img/influxdb_gui4.png" /></p>
+<p>チュートリアルでは環境変数にトークンを設定し、そこから取るようです。同じようにやりましょう。</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">INFLUXDB_TOKEN</span><span class="o">=</span>****
+</code></pre></div>
+<p>次のコードでは、環境変数から取ってきたトークン、org(要調査)、URLを利用してクライアントをインスタンス化します。</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">influxdb_client</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">influxdb_client</span> <span class="kn">import</span> <span class="n">InfluxDBClient</span><span class="p">,</span> <span class="n">Point</span><span class="p">,</span> <span class="n">WritePrecision</span>
+<span class="kn">from</span> <span class="nn">influxdb_client.client.write_api</span> <span class="kn">import</span> <span class="n">SYNCHRONOUS</span>
+
+<span class="n">token</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;INFLUXDB_TOKEN&quot;</span><span class="p">)</span>
+<span class="n">org</span> <span class="o">=</span> <span class="s2">&quot;kokshilab&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://[HOST]:[PORT]&quot;</span>
+
+<span class="n">write_client</span> <span class="o">=</span> <span class="n">influxdb_client</span><span class="o">.</span><span class="n">InfluxDBClient</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="n">org</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="write-api">Write API</h3>
+<p>InfluxDBにデータを書き込むときは<code>InfluxDBClient.write_api</code>を使います。チュートリアルそのままだと実行できないので変えます。</p>
+<div class="highlight"><pre><span></span><code><span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;sample-bucket&quot;</span>
+
+<span class="c1"># write_api = client.write_api(write_options=SYNCHRONOUS)</span>
+<span class="n">write_api</span> <span class="o">=</span> <span class="n">write_client</span><span class="o">.</span><span class="n">write_api</span><span class="p">(</span><span class="n">write_options</span><span class="o">=</span><span class="n">SYNCHRONOUS</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+  <span class="n">point</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">Point</span><span class="p">(</span><span class="s2">&quot;measurement1&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">tag</span><span class="p">(</span><span class="s2">&quot;tagname1&quot;</span><span class="p">,</span> <span class="s2">&quot;tagvalue1&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s2">&quot;field1&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+  <span class="p">)</span>
+  <span class="n">write_api</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="s2">&quot;kokshilab&quot;</span><span class="p">,</span> <span class="n">record</span><span class="o">=</span><span class="n">point</span><span class="p">)</span>
+  <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># separate points by 1 second</span>
+</code></pre></div>
+<h3 id="query-api">Query API</h3>
+<p>データを取るときは<code>InfluxDBClient.query_api</code>を利用します。<a href="https://docs.influxdata.com/influxdb/latest/reference/syntax/flux/">Flux</a>を利用していろいろすることが出来ます。</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># query_api = client.query_api()</span>
+<span class="n">query_api</span> <span class="o">=</span> <span class="n">write_client</span><span class="o">.</span><span class="n">query_api</span><span class="p">()</span>
+
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;from(bucket: &quot;sample-bucket&quot;)</span>
+<span class="s2"> |&gt; range(start: -10m)</span>
+<span class="s2"> |&gt; filter(fn: (r) =&gt; r._measurement == &quot;measurement1&quot;)&quot;&quot;&quot;</span>
+<span class="n">tables</span> <span class="o">=</span> <span class="n">query_api</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="s2">&quot;kokshilab&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">tables</span><span class="p">:</span>
+  <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">records</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
 </code></pre></div>
 
 

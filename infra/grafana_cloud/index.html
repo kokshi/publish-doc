@@ -612,6 +612,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#graphite-expoter" class="md-nav__link">
+    graphite-expoter マッピングの設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     文献
   </a>
@@ -877,6 +884,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#graphite-expoter" class="md-nav__link">
+    graphite-expoter マッピングの設定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     文献
   </a>
@@ -954,6 +968,27 @@ $<span class="w"> </span>sudo<span class="w"> </span>docker<span class="w"> </sp
 <p>もしかしたら変換したほうがやりやすいのかもしれません。</p>
 <p>https://kokshi.grafana.net/a/cloud-home-app</p>
 <p>多分タグ付けとかができるので頑張って書く。</p>
+<h4 id="graphite-expoter">graphite-expoter マッピングの設定</h4>
+<p><code>match</code>は基本Globで書けるが<code>.cpu-*.</code>のように、ワイルドカードに<code>.</code>以外が隣接する場合エラーになるので注意する。TrueNASは<a href="https://www.truenas.com/docs/scale/scaleuireference/reportingscreensscale/">Reports Config</a>の"Graphite Separate Instances"を有効にするとマッピングが思い通りに行く。</p>
+<p><a href="https://github.com/prometheus/statsd_exporter#metric-mapping-and-configuration">prometheus/statsd_exporter - マッピングファイルの記法</a></p>
+<div class="highlight"><pre><span></span><code># graphite_mapping.conf
+mappings:
+- match: servers.truenas_local.cpu.*.cpu.*
+  name: truenas_cpu
+  labels:
+    cpu: $1
+    mode: $2
+- match: servers.truenas_local.disk.*.disk_time.*
+  name: &quot;truenas_disk_time_${2}&quot;
+  labels:
+    disk: $1
+- match: &quot;servers.truenas_local.interface.*.*.*&quot;
+  name: &quot;truenas_${2}_${3}&quot;
+  labels:
+    interface: $1
+- match: &quot;servers.truenas_local.memory.memory.*&quot;
+  name: &quot;truenas_memory_${1}&quot;
+</code></pre></div>
 <h4 id="_4">文献</h4>
 <p>https://www.truenas.com/docs/scale/scaleuireference/reportingscreensscale/</p>
 <p>https://www.truenas.com/community/threads/truenas-scale-reporting-to-graphite-change-port.101052/</p>

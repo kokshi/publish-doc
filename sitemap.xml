@@ -16,22 +16,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kokshi.github.io/publish-doc/grafana/</loc>
-         <lastmod>2023-09-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kokshi.github.io/publish-doc/influxdb/</loc>
-         <lastmod>2023-09-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://kokshi.github.io/publish-doc/mkdocs/</loc>
-         <lastmod>2023-09-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kokshi.github.io/publish-doc/pipenv/</loc>
          <lastmod>2023-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -47,6 +32,11 @@
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/app/misskey/</loc>
+         <lastmod>2023-09-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kokshi.github.io/publish-doc/app/pipenv/</loc>
          <lastmod>2023-09-02</lastmod>
          <changefreq>daily</changefreq>
     </url>

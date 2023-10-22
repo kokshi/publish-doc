@@ -8,27 +8,23 @@
       
       
       
-        <link rel="canonical" href="https://kokshi.github.io/publish-doc/infra/grafana_cloud/">
+        <link rel="canonical" href="https://kokshi.github.io/publish-doc/other/learning_modern_linux/4_access_controls/">
       
       
-        <link rel="prev" href="../esxi_cloudinit/">
       
-      
-        <link rel="next" href="../ix2215_ipoe/">
-      
-      <link rel="icon" href="../../img/favicon.svg">
+      <link rel="icon" href="../../../img/favicon.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>Grafana Cloud - こくしラボ</title>
+        <title>4章 アクセス制御 - こくしラボ</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c4a75a56.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.c4a75a56.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -46,9 +42,9 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#grafana-cloud" class="md-skip">
+        <a href="#4" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -87,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
-    <a href="../.." title="こくしラボ" class="md-header__button md-logo" aria-label="こくしラボ" data-md-component="logo">
+    <a href="../../.." title="こくしラボ" class="md-header__button md-logo" aria-label="こくしラボ" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>
@@ -106,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Grafana Cloud
+              4章 アクセス制御
             
           </span>
         </div>
@@ -181,7 +177,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       はじめに
     </a>
   </li>
@@ -196,7 +192,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../mkdocs/" class="md-tabs__link">
+      <a href="../../../mkdocs/" class="md-tabs__link">
         Documentation
       </a>
     </li>
@@ -212,7 +208,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../app/pipenv/" class="md-tabs__link">
+      <a href="../../../app/pipenv/" class="md-tabs__link">
         Application
       </a>
     </li>
@@ -222,15 +218,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../proxmox/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../infra/proxmox/" class="md-tabs__link">
         Infrastructure
       </a>
     </li>
@@ -251,7 +245,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../other/learning_modern_linux/3_script/" class="md-tabs__link">
+      <a href="../3_script/" class="md-tabs__link">
         Other
       </a>
     </li>
@@ -281,7 +275,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="こくしラボ" class="md-nav__button md-logo" aria-label="こくしラボ" data-md-component="logo">
+    <a href="../../.." title="こくしラボ" class="md-nav__button md-logo" aria-label="こくしラボ" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>
@@ -312,7 +306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         はじめに
       </a>
     </li>
@@ -356,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mkdocs/" class="md-nav__link">
+      <a href="../../../mkdocs/" class="md-nav__link">
         mkdocs
       </a>
     </li>
@@ -407,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../app/pipenv/" class="md-nav__link">
+      <a href="../../../app/pipenv/" class="md-nav__link">
         Pipenv
       </a>
     </li>
@@ -421,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../app/influxdb/" class="md-nav__link">
+      <a href="../../../app/influxdb/" class="md-nav__link">
         InfluxDB
       </a>
     </li>
@@ -435,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../app/flet/" class="md-nav__link">
+      <a href="../../../app/flet/" class="md-nav__link">
         Flet
       </a>
     </li>
@@ -455,16 +449,16 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
       
       
       
@@ -473,7 +467,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Infrastructure
@@ -486,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxmox/" class="md-nav__link">
+      <a href="../../../infra/proxmox/" class="md-nav__link">
         Proxmox VE
       </a>
     </li>
@@ -500,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../esxi_optiplex/" class="md-nav__link">
+      <a href="../../../infra/esxi_optiplex/" class="md-nav__link">
         ESXi + Dell Optiplex 7050
       </a>
     </li>
@@ -514,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../esxi_cloudinit/" class="md-nav__link">
+      <a href="../../../infra/esxi_cloudinit/" class="md-nav__link">
         ESXi + cloud-init
       </a>
     </li>
@@ -526,119 +520,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Grafana Cloud
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../infra/grafana_cloud/" class="md-nav__link">
         Grafana Cloud
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    概要
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    参考
-  </a>
-  
-    <nav class="md-nav" aria-label="参考">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prometheusgrafana" class="md-nav__link">
-    Prometheus/Grafanaの参考
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    やったこと
-  </a>
-  
-    <nav class="md-nav" aria-label="やったこと">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ubuntu-vm" class="md-nav__link">
-    Ubuntu (VM)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#truenas" class="md-nav__link">
-    TrueNAS
-  </a>
-  
-    <nav class="md-nav" aria-label="TrueNAS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#graphite-expoter" class="md-nav__link">
-    graphite-expoter マッピングの設定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    文献
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -650,7 +536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ix2215_ipoe/" class="md-nav__link">
+      <a href="../../../infra/ix2215_ipoe/" class="md-nav__link">
         IX2215 IPoE(v6プラス, MAP-E方式)で接続する
       </a>
     </li>
@@ -664,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ix2215_initial/" class="md-nav__link">
+      <a href="../../../infra/ix2215_initial/" class="md-nav__link">
         IX2215の初期設定
       </a>
     </li>
@@ -678,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../room_network/" class="md-nav__link">
+      <a href="../../../infra/room_network/" class="md-nav__link">
         自宅ネットワーク
       </a>
     </li>
@@ -692,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tailscale/" class="md-nav__link">
+      <a href="../../../infra/tailscale/" class="md-nav__link">
         Tailscale
       </a>
     </li>
@@ -772,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other/learning_modern_linux/3_script/" class="md-nav__link">
+      <a href="../3_script/" class="md-nav__link">
         第3章
       </a>
     </li>
@@ -793,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other/test/" class="md-nav__link">
+      <a href="../../test/" class="md-nav__link">
         test
       </a>
     </li>
@@ -835,64 +721,29 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    概要
+    基本
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="基本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    参考
+    リソースと所有権
   </a>
   
-    <nav class="md-nav" aria-label="参考">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#prometheusgrafana" class="md-nav__link">
-    Prometheus/Grafanaの参考
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    やったこと
-  </a>
-  
-    <nav class="md-nav" aria-label="やったこと">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ubuntu-vm" class="md-nav__link">
-    Ubuntu (VM)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#truenas" class="md-nav__link">
-    TrueNAS
-  </a>
-  
-    <nav class="md-nav" aria-label="TrueNAS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#graphite-expoter" class="md-nav__link">
-    graphite-expoter マッピングの設定
+    サンドボックス化
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    文献
+    アクセス制御の種類
   </a>
   
 </li>
@@ -901,9 +752,11 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ユーザ
+  </a>
   
 </li>
       
@@ -925,77 +778,82 @@
   
 
 
-<h1 id="grafana-cloud">Grafana Cloud</h1>
-<p>Created: 2023/08/31</p>
-<h2 id="_1">概要</h2>
-<p>PrometheusとかGrafanaとか自前で構築しようかと思ったけど途端にめんどくさくなったのでGrafana Cloudで楽できないか検討してみます。</p>
-<h2 id="_2">参考</h2>
-<p>https://blog.geeko.jp/ftake/2866</p>
-<h3 id="prometheusgrafana">Prometheus/Grafanaの参考</h3>
-<p><a href="https://zenn.dev/mttk030/articles/6ea992945c856f">Prometheus最速構築 - Zenn</a></p>
-<p><a href="https://qiita.com/Hi_Noguchi/items/95e7d2b9a3f2857e9ff9">Ubuntu20.04でPrometheusを用いてリソースモニタリング（環境構築編） - Qiita</a></p>
-<h2 id="_3">やったこと</h2>
-<h3 id="ubuntu-vm">Ubuntu (VM)</h3>
-<p>手順に従ってGrafana Agentのインストールと<code>/etc/grafana-agent.yaml</code>の設定ファイル書き換えを行う。最後にサービスをリスタートして完了。</p>
-<p>https://kokshi.grafana.net/connections/add-new-connection/linux-node</p>
-<p><img alt="Alt text" src="../img/grafanacloud_ubuntu.png" /></p>
-<h3 id="truenas">TrueNAS</h3>
-<p><a href="https://graphiteapp.org/">Graphite</a>でデータを吐けるとのことなので、TrueNAS -&gt; Graphite -&gt; Grafana Cloudでイケないか試す。</p>
-<p>訂正
-TrueNAS -&gt; graphite-expoter -&gt; Grafana Agent -&gt; Grafana Cloud</p>
-<p>https://github.com/prometheus/graphite_exporter/</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>prom/graphite-exporter
-$<span class="w"> </span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">9108</span>:9108<span class="w"> </span>-p<span class="w"> </span><span class="m">2003</span>:9109<span class="w"> </span>-p<span class="w"> </span><span class="m">2003</span>:9109/udp<span class="w"> </span>-v<span class="w"> </span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>/graphite_mapping.conf:/tmp/graphite_mapping.conf<span class="w"> </span>--restart<span class="o">=</span>always<span class="w"> </span>--name<span class="w"> </span>graphite-exporter<span class="w"> </span>prom/graphite-exporter<span class="w"> </span>--graphite.mapping-config<span class="o">=</span>/tmp/graphite_mapping.conf<span class="w"> </span>--graphite.mapping-strict-match
+<h1 id="4">4章 アクセス制御</h1>
+<p>Created: 2023/10/09</p>
+<h2 id="_1">基本</h2>
+<h3 id="_2">リソースと所有権</h3>
+<ul>
+<li>ユーザアカウント<ul>
+<li>↑ ユーザIDが紐づいている</li>
+<li>人間はユーザアカウントでログインできる</li>
+<li>プロセスはユーザアカウントによって実行できる</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>graph LR
+    user(ユーザ) --&gt;|起動| proc(プロセス)
+    proc --&gt;|使用| file(ファイル)
+    file --&gt;|所有| user
 </code></pre></div>
-<p><code>graphite_mapping.conf</code>は空でも動きます。</p>
-<p>Grafana Agentの設定に次の設定を追加する。ターゲットに graphite-expoterのホスト名＋ポートを書けばOKです。</p>
-<div class="highlight"><pre><span></span><code>metrics:
-  configs:
-  - name: integrations
-    remote_write:
-    - basic_auth:
-        password: any
-        username: any
-      url: https://prometheus-prod-37-prod-ap-southeast-1.grafana.net/api/prom/push
-    scrape_configs:
-      # Add here any snippet that belongs to the `metrics.configs.scrape_configs` section.
-      # For a correct indentation, paste snippets copied from Grafana Cloud at the beginning of the line.
-      - job_name: &#39;graphite&#39;
-        static_configs:
-        - targets: [&#39;localhost:9108&#39;]
-</code></pre></div>
-<p><img alt="Alt text" src="../img/grafanacloud_truenas.png" /></p>
-<p>もしかしたら変換したほうがやりやすいのかもしれません。</p>
-<p>https://kokshi.grafana.net/a/cloud-home-app</p>
-<p>多分タグ付けとかができるので頑張って書く。</p>
-<p>下記のコマンドでテスト受信できる。</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>nc<span class="w"> </span>-lk<span class="w"> </span><span class="m">2003</span>
-</code></pre></div>
-<h4 id="graphite-expoter">graphite-expoter マッピングの設定</h4>
-<p><code>match</code>は基本Globで書けるが<code>.cpu-*.</code>のように、ワイルドカードに<code>.</code>以外が隣接する場合エラーになるので注意する。TrueNASは<a href="https://www.truenas.com/docs/scale/scaleuireference/reportingscreensscale/">Reports Config</a>の"Graphite Separate Instances"を有効にするとマッピングが思い通りに行く。</p>
-<p><a href="https://github.com/prometheus/statsd_exporter#metric-mapping-and-configuration">prometheus/statsd_exporter - マッピングファイルの記法</a></p>
-<div class="highlight"><pre><span></span><code># graphite_mapping.conf
-mappings:
-- match: servers.truenas_local.cpu.*.cpu.*
-  name: truenas_cpu
-  labels:
-    cpu: $1
-    mode: $2
-- match: servers.truenas_local.disk.*.disk_time.*
-  name: &quot;truenas_disk_time_${2}&quot;
-  labels:
-    disk: $1
-- match: &quot;servers.truenas_local.interface.*.*.*&quot;
-  name: &quot;truenas_${2}_${3}&quot;
-  labels:
-    interface: $1
-- match: &quot;servers.truenas_local.memory.memory.*&quot;
-  name: &quot;truenas_memory_${1}&quot;
-</code></pre></div>
-<h4 id="_4">文献</h4>
-<p>https://www.truenas.com/docs/scale/scaleuireference/reportingscreensscale/</p>
-<p>https://www.truenas.com/community/threads/truenas-scale-reporting-to-graphite-change-port.101052/</p>
-<p>TrueNASはGraphiteサーバーへのアクセスポート(2003らしい)を変えられないみたい</p>
+<p>Linuxにおけるユーザ、プロセス、ファイルの関係は次の通り。</p>
+<ul>
+<li>ユーザ<ul>
+<li>プロセスを起動し、ファイルを所有</li>
+<li>プロセスとは、カーネルがメインメモリにロードして実行するプログラムのことを指す</li>
+</ul>
+</li>
+<li>ファイル<ul>
+<li>デフォルトではファイルを作成したユーザがそのファイルを所有する</li>
+</ul>
+</li>
+<li>プロセス<ul>
+<li>他プロセスとの通信およびデータの永続化のためにファイルを使用する</li>
+<li>ユーザもファイルを使用するが、それhあプロセスを介した直接的な使用となる</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">サンドボックス化</h3>
+<p>FreeBSD jail、コンテナ、仮想マシンなどの様々な手法を指すことがある、曖昧な言葉。</p>
+<h3 id="_4">アクセス制御の種類</h3>
+<ul>
+<li>任意アクセス制御<ul>
+<li>ユーザのアイデンティティ(ユーザIDなど)に基づいてリソースのアクセスを制限する。</li>
+<li>ある権限を持つユーザは他のユーザ位にその権限を譲ることができる（ので任意）</li>
+</ul>
+</li>
+<li>強制アクセス制御<ul>
+<li>ユーザにはクリアランスレベルが、リソースにはセキュリティレベルが割り当てられる</li>
+<li>ユーザは自分のクリアランスレベルと同等またはそれいかのクリアランスレベルに対応するリソースにのみアクセスできる</li>
+<li>この強制アクセスモデルでは管理者が「厳密に」アクセスを制御し、すべての権限を設定する</li>
+<li>ユーザは、たとえ自分の所有するリソースであっても、自分自身でアクセス権を設定できない</li>
+</ul>
+</li>
+</ul>
+<p>Linuxは、すべてを変更できるスーパーユーザーか、アクセスが制限された一般ユーザーかのどちらかである。</p>
+<p><strong>SELinuxはLinuxにおける強制アクセス制御の実装である。</strong></p>
+<h2 id="_5">ユーザ</h2>
+<p>2種類のユーザアカウントがある。</p>
+<ul>
+<li>いわゆるシステムユーザ、またはシステムアカウント<ul>
+<li>デーモン、システムユーザ権限でバックグラウンドプロセスとして実行される</li>
+</ul>
+</li>
+<li>一般ユーザ<ul>
+<li>シェルを介して対話的にLinuxを利用するユーザを指す</li>
+</ul>
+</li>
+</ul>
+<p>システムユーザと一般ユーザは組織形態によって区別する。</p>
+<ul>
+<li>ユーザID(<strong>UID</strong>)<ul>
+<li>Linuxが管理する32bitの数値</li>
+<li>LinuxはUIDでユーザを識別する<ul>
+<li>かつ、グループID(GID)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -1017,42 +875,6 @@ mappings:
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="フッター" >
-        
-          
-          <a href="../esxi_cloudinit/" class="md-footer__link md-footer__link--prev" aria-label="前: ESXi + cloud-init" rel="prev">
-            <div class="md-footer__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <div class="md-ellipsis">
-                <span class="md-footer__direction">
-                  前
-                </span>
-                ESXi + cloud-init
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../ix2215_ipoe/" class="md-footer__link md-footer__link--next" aria-label="次: IX2215 IPoE(v6プラス, MAP-E方式)で接続する" rel="next">
-            <div class="md-footer__title">
-              <div class="md-ellipsis">
-                <span class="md-footer__direction">
-                  次
-                </span>
-                IX2215 IPoE(v6プラス, MAP-E方式)で接続する
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1100,10 +922,10 @@ mappings:
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
     
   </body>

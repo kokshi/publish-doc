@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://kokshi.github.io/publish-doc/app/influxdb/">
+        <link rel="canonical" href="https://kokshi.github.io/publish-doc/embedded/yocto-swupdate-rpi/">
       
       
-        <link rel="prev" href="../pipenv/">
+        <link rel="prev" href="../ubuntu_core/">
       
       
-        <link rel="next" href="../flet/">
+        <link rel="next" href="../yocto/">
       
       <link rel="icon" href="../../img/favicon.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>InfluxDB - こくしラボ</title>
+        <title>Yocto + SWUpdate + RPi - こくしラボ</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#influxdb" class="md-skip">
+        <a href="#yocto-swupdate-raspberrypi3" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              InfluxDB
+              Yocto + SWUpdate + RPi
             
           </span>
         </div>
@@ -206,15 +206,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../pipenv/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../app/pipenv/" class="md-tabs__link">
         Application
       </a>
     </li>
@@ -240,13 +238,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../embedded/ubuntu_core/" class="md-tabs__link">
+      <a href="../ubuntu_core/" class="md-tabs__link md-tabs__link--active">
         Embedded
       </a>
     </li>
@@ -392,16 +392,16 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
       
       
       
@@ -410,7 +410,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Application
@@ -423,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipenv/" class="md-nav__link">
+      <a href="../../app/pipenv/" class="md-nav__link">
         Pipenv
       </a>
     </li>
@@ -435,141 +435,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          InfluxDB
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../app/influxdb/" class="md-nav__link">
         InfluxDB
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    概要
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    #とは
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    動かす
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#influx-cli" class="md-nav__link">
-    使う (Influx CLI)
-  </a>
-  
-    <nav class="md-nav" aria-label="使う (Influx CLI)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-an-influxdb-profile" class="md-nav__link">
-    Configure an InfluxDB profile
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#select-or-create-a-bucket" class="md-nav__link">
-    Select or Create a bucket
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#write-data" class="md-nav__link">
-    Write Data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#execute-a-flux-query" class="md-nav__link">
-    Execute a Flux Query
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    使う (Python)
-  </a>
-  
-    <nav class="md-nav" aria-label="使う (Python)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    接続
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#write-api" class="md-nav__link">
-    Write API
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-api" class="md-nav__link">
-    Query API
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -581,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../flet/" class="md-nav__link">
+      <a href="../../app/flet/" class="md-nav__link">
         Flet
       </a>
     </li>
@@ -750,16 +620,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -768,7 +638,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Embedded
@@ -781,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../embedded/ubuntu_core/" class="md-nav__link">
+      <a href="../ubuntu_core/" class="md-nav__link">
         Ubuntu Core
       </a>
     </li>
@@ -793,11 +663,141 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../embedded/yocto-swupdate-rpi/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Yocto + SWUpdate + RPi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Yocto + SWUpdate + RPi
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raspberry-pi3" class="md-nav__link">
+    Raspberry Pi3で試す
+  </a>
+  
+    <nav class="md-nav" aria-label="Raspberry Pi3で試す">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ビルド環境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ターゲット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poky" class="md-nav__link">
+    Poky環境のセットアップ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta-raspberrypi" class="md-nav__link">
+    meta-raspberrypiの取得
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta-swupdate-boards" class="md-nav__link">
+    meta-swupdate-boardsの取得
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localconf" class="md-nav__link">
+    local.confを編集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ビルド
+  </a>
+  
+    <nav class="md-nav" aria-label="ビルド">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    エラー
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    書き込み
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    結果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -809,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../embedded/yocto/" class="md-nav__link">
+      <a href="../yocto/" class="md-nav__link">
         Yocto
       </a>
     </li>
@@ -958,51 +958,66 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    #とは
+  <a href="#raspberry-pi3" class="md-nav__link">
+    Raspberry Pi3で試す
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    動かす
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#influx-cli" class="md-nav__link">
-    使う (Influx CLI)
-  </a>
-  
-    <nav class="md-nav" aria-label="使う (Influx CLI)">
+    <nav class="md-nav" aria-label="Raspberry Pi3で試す">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configure-an-influxdb-profile" class="md-nav__link">
-    Configure an InfluxDB profile
+  <a href="#_2" class="md-nav__link">
+    ビルド環境
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#select-or-create-a-bucket" class="md-nav__link">
-    Select or Create a bucket
+  <a href="#_3" class="md-nav__link">
+    ターゲット
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#write-data" class="md-nav__link">
-    Write Data
+  <a href="#poky" class="md-nav__link">
+    Poky環境のセットアップ
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#execute-a-flux-query" class="md-nav__link">
-    Execute a Flux Query
+  <a href="#meta-raspberrypi" class="md-nav__link">
+    meta-raspberrypiの取得
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta-swupdate-boards" class="md-nav__link">
+    meta-swupdate-boardsの取得
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localconf" class="md-nav__link">
+    local.confを編集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ビルド
+  </a>
+  
+    <nav class="md-nav" aria-label="ビルド">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    エラー
   </a>
   
 </li>
@@ -1011,32 +1026,17 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    使う (Python)
-  </a>
-  
-    <nav class="md-nav" aria-label="使う (Python)">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    接続
+  <a href="#_6" class="md-nav__link">
+    書き込み
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#write-api" class="md-nav__link">
-    Write API
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-api" class="md-nav__link">
-    Query API
+  <a href="#_7" class="md-nav__link">
+    結果
   </a>
   
 </li>
@@ -1064,139 +1064,145 @@
   
 
 
-<h1 id="influxdb">InfluxDB</h1>
-<p>Created: 2023/06/15</p>
+<h1 id="yocto-swupdate-raspberrypi3">Yocto + SWUpdate + RaspberryPi3</h1>
+<p>Created: 2023/10/26</p>
 <h2 id="_1">概要</h2>
-<p>InfluxDBを試しつつ情報を蓄積します。</p>
-<h2 id="_2">#とは</h2>
-<blockquote>
-<p><a href="https://www.influxdata.com/">InfluxDB Times Series Data Platform | InfluxData</a></p>
-<p>InfluxDB.
-It's About Time.
-Manage all types of time series data in a single, purpose-built database. Run at any scale in any environment in the cloud, on-premises, or at the edge.</p>
-</blockquote>
-<p>オープンソースの時系列データベースです。センシングデータなどの時間と紐づいたデータを扱えます。</p>
-<h2 id="_3">動かす</h2>
-<p>Dockerで簡単に動きます。</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">8086</span>:8086<span class="w"> </span>-v<span class="w"> </span>myInfluxVolume:/var/lib/influxdb2<span class="w"> </span>-d<span class="w"> </span>-t<span class="w"> </span>influxdb<span class="w"> </span>influxdb:latest
-</code></pre></div>
-<p>セットアップが終わるとGUIが表示されます。</p>
-<p><img alt="alt" src="../img/influxdb_gui.png" /></p>
-<h2 id="influx-cli">使う (Influx CLI)</h2>
-<p>Dockerコンテナにクライアントが入っています。</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>influxdb<span class="w"> </span>influx<span class="w"> </span>version
-Influx<span class="w"> </span>CLI<span class="w"> </span>dev<span class="w"> </span><span class="o">(</span>git:<span class="w"> </span>none<span class="o">)</span><span class="w"> </span>build_date:<span class="w"> </span><span class="m">2023</span>-04-28T14:24:14Z
-</code></pre></div>
+<p>SWUpdateをRaspberryPi3で試す。</p>
+<h2 id="raspberry-pi3">Raspberry Pi3で試す</h2>
+<p>次の手順でイメージをビルドしSDカードに書き込んで起動を確かめます。</p>
+<ol>
+<li>開発用コンテナを作成</li>
+<li>各レイヤの取得</li>
+<li>ビルド</li>
+<li>書き込み</li>
+</ol>
+<h3 id="_2">ビルド環境</h3>
 <ul>
-<li><code>bucket</code> ... Bucket management commands</li>
-<li><code>export</code> ... Export resources as a template</li>
-<li><code>help</code> ... List all commands</li>
-<li><code>help [command]</code> ... Get help with an individual command</li>
-<li><code>query</code> ... Execute a query</li>
-<li><code>write</code> ... Write points to InfluxDB</li>
+<li>Windows 11 + WSL + Docker</li>
 </ul>
-<p>Webクライアントにヘルプがあったので参考にCLIを触ってみます。ここから<code>$ sudo docker exec -it influxdb bash</code>でコンテナ内のシェルで作業します。</p>
-<h3 id="configure-an-influxdb-profile">Configure an InfluxDB profile</h3>
-<p>InfluxDBの接続を構成します。Webクライアントのチュートリアルがサンプルをくれます。</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>influx<span class="w"> </span>config<span class="w"> </span>create<span class="w"> </span>--config-name<span class="w"> </span>onboarding<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--host-url<span class="w"> </span><span class="s2">&quot;http://[InfluxDB_Host]:8086&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--org<span class="w"> </span><span class="s2">&quot;[ORG]&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--token<span class="w"> </span><span class="s2">&quot;[Token]&quot;</span><span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>--active
-Active<span class="w">  </span>Name<span class="w">            </span>URL<span class="w">                             </span>Org
-*<span class="w">       </span>onboarding<span class="w">      </span>http://<span class="o">[</span>InfluxDB_Host<span class="o">]</span>:8086<span class="w">      </span><span class="o">[</span>ORG<span class="o">]</span>
+<h3 id="_3">ターゲット</h3>
+<ul>
+<li>Raspberry Pi3</li>
+<li>Yocto 4.0 (kirkstone)</li>
+</ul>
+<h3 id="poky">Poky環境のセットアップ</h3>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdir<span class="w"> </span>rpi-kirkstone
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>rpi-kirkstone/
+$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>kirkstone<span class="w"> </span>git://git.yoctoproject.org/poky.git
+$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w">  </span>-it<span class="w">  </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/workdir<span class="w"> </span>crops/poky<span class="w"> </span>--workdir<span class="o">=</span>/workdir
 </code></pre></div>
-<p><code>--org "[ORG]"</code>はIDではなくNameの方を使いましょう。でないと<code>Error: failed to lookup org with name "[org_id]": 404 Not Found: organization name "[org_id]" not found</code>と怒られます。</p>
-<h3 id="select-or-create-a-bucket">Select or Create a bucket</h3>
-<p>Bucketを作ります。</p>
-<p><img alt="alt" src="../img/influxdb_gui2.png" /></p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>influx<span class="w"> </span>bucket<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>sample-bucket<span class="w"> </span>-c<span class="w"> </span>onboarding
+<p>コンテナ内のシェルで作業する。関連コマンドを有効にするためにスクリプトを実行する。</p>
+<div class="highlight"><pre><span></span><code>pokyuser@4c5ad0c1bea7:/workdir$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>poky/oe-init-build-env
 </code></pre></div>
-<h3 id="write-data">Write Data</h3>
-<p>Bucketにデータを書き込みます。サンプルのCSVをAmazon S3に用意してくれている(優しい！)ので使います。</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>influx<span class="w"> </span>write<span class="w"> </span>--bucket<span class="w"> </span>sample-bucket<span class="w"> </span>--url<span class="w"> </span>https://influx-testdata.s3.amazonaws.com/air-sensor-data-annotated.csv
+<p>ここまでやるとbuildにconfなどが生成される</p>
+<div class="highlight"><pre><span></span><code>rpi-mickledore/
+┣ build/
+┃ ┗ conf/
+┃   ┣ bblayers.conf
+┃   ┣ conf-notes.txt
+┃   ┣ local.conf
+┃   ┗ templateconf.cfg
+┗ poky/
 </code></pre></div>
-<p><img alt="alt" src="../img/influxdb_gui3.png" /></p>
-<h3 id="execute-a-flux-query">Execute a Flux Query</h3>
-<p>データベースなのでクエリが存在します。以前はInflux QueryというSQLライクなクエリ言語だったそうですが、<a href="https://docs.influxdata.com/influxdb/latest/reference/syntax/flux/">Flux</a>が新しいバージョン(2.x ~)では主流のようです。</p>
-<p>サンプルスクリプトは下記のとおりです。なんだか見慣れない形ですが、データを処理することに特化しているためこの様になっているみたいです。</p>
-<div class="highlight"><pre><span></span><code>from(bucket: “weather-data”)
-  |&gt; range(start: -10m)
-  |&gt; filter(fn: (r) =&gt; r._measurement == “temperature”)
+<h3 id="meta-raspberrypi">meta-raspberrypiの取得</h3>
+<p><code>bitbake-layers layerindex-fetch</code>を利用してmeta-raspberrypiをPoky内に配置する。</p>
+<div class="highlight"><pre><span></span><code>pokyuser@8f2fb8eb82ec:/workdir/build$<span class="w"> </span>bitbake-layers<span class="w"> </span>layerindex-fetch<span class="w"> </span>meta-raspberrypi
+pokyuser@8f2fb8eb82ec:/workdir/build$<span class="w"> </span>bitbake-layers<span class="w"> </span>show-layers
+NOTE:<span class="w"> </span>Starting<span class="w"> </span>bitbake<span class="w"> </span>server...
+layer<span class="w">                 </span>path<span class="w">                                                                    </span><span class="nv">priority</span>
+<span class="o">========================================================================================================</span>
+core<span class="w">                  </span>/workdir/poky/meta<span class="w">                                                      </span><span class="m">5</span>
+yocto<span class="w">                 </span>/workdir/poky/meta-poky<span class="w">                                                 </span><span class="m">5</span>
+yoctobsp<span class="w">              </span>/workdir/poky/meta-yocto-bsp<span class="w">                                            </span><span class="m">5</span>
+raspberrypi<span class="w">           </span>/workdir/poky/meta-raspberrypi<span class="w">                                          </span><span class="m">9</span>
 </code></pre></div>
-<p>で、CLIで実行するときは次のようなコマンドになります。ワッと結果が出力されます。</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>influx<span class="w"> </span>query<span class="w"> </span><span class="s2">&quot;from(bucket:\&quot;sample-bucket\&quot;) |&gt; range(start:-30m)&quot;</span>
-Result:<span class="w"> </span>_result
-Table:<span class="w"> </span>keys:<span class="w"> </span><span class="o">[</span>_start,<span class="w"> </span>_stop,<span class="w"> </span>_field,<span class="w"> </span>_measurement,<span class="w"> </span>sensor_id<span class="o">]</span>
-<span class="w">                   </span>_start:time<span class="w">                      </span>_stop:time<span class="w">           </span>_field:string<span class="w">     </span>_measurement:string<span class="w">        </span>sensor_id:string<span class="w">                      </span>_time:time<span class="w">                  </span>_value:float
-------------------------------<span class="w">  </span>------------------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>------------------------------<span class="w">  </span>----------------------------
-<span class="m">2023</span>-06-15T14:20:55.732612670Z<span class="w">  </span><span class="m">2023</span>-06-15T14:50:55.732612670Z<span class="w">                      </span>co<span class="w">              </span>airSensors<span class="w">       </span>TLM0100<span class="w">  </span><span class="m">2023</span>-06-15T14:20:56.000000000Z<span class="w">            </span><span class="m">0</span>.6540886812204695
-<span class="m">2023</span>-06-15T14:20:55.732612670Z<span class="w">  </span><span class="m">2023</span>-06-15T14:50:55.732612670Z<span class="w">                      </span>co<span class="w">              </span>airSensors<span class="w">       </span>TLM0100<span class="w">  </span><span class="m">2023</span>-06-15T14:21:06.000000000Z<span class="w">            </span><span class="m">0</span>.6655087367528416
-...
+<h3 id="meta-swupdate-boards">meta-swupdate-boardsの取得</h3>
+<p><code>bitbake-layers layerindex-fetch</code>を利用してmeta-raspberrypiをPoky内に配置する。</p>
+<div class="highlight"><pre><span></span><code>pokyuser@8f2fb8eb82ec:/workdir/build$<span class="w"> </span>bitbake-layers<span class="w"> </span>layerindex-fetch<span class="w"> </span>meta-swupdate-boards
 </code></pre></div>
-<p>集計もできるみたいです。便利～！</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>influx<span class="w"> </span>query<span class="w"> </span><span class="s2">&quot;from(bucket:\&quot;sample-bucket\&quot;) |&gt; range(start:-30m) |&gt; mean()&quot;</span>
-Result:<span class="w"> </span>_result
-Table:<span class="w"> </span>keys:<span class="w"> </span><span class="o">[</span>_start,<span class="w"> </span>_stop,<span class="w"> </span>_field,<span class="w"> </span>_measurement,<span class="w"> </span>sensor_id<span class="o">]</span>
-<span class="w">                   </span>_start:time<span class="w">                      </span>_stop:time<span class="w">           </span>_field:string<span class="w">     </span>_measurement:string<span class="w">        </span>sensor_id:string<span class="w">                  </span>_value:float
-------------------------------<span class="w">  </span>------------------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------------
-<span class="m">2023</span>-06-15T14:22:28.665743801Z<span class="w">  </span><span class="m">2023</span>-06-15T14:52:28.665743801Z<span class="w">                      </span>co<span class="w">              </span>airSensors<span class="w">                 </span>TLM0100<span class="w">            </span><span class="m">0</span>.6622839258689658
-Table:<span class="w"> </span>keys:<span class="w"> </span><span class="o">[</span>_start,<span class="w"> </span>_stop,<span class="w"> </span>_field,<span class="w"> </span>_measurement,<span class="w"> </span>sensor_id<span class="o">]</span>
-<span class="w">                   </span>_start:time<span class="w">                      </span>_stop:time<span class="w">           </span>_field:string<span class="w">     </span>_measurement:string<span class="w">        </span>sensor_id:string<span class="w">                  </span>_value:float
-------------------------------<span class="w">  </span>------------------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------<span class="w">  </span>----------------------------
-<span class="m">2023</span>-06-15T14:22:28.665743801Z<span class="w">  </span><span class="m">2023</span>-06-15T14:52:28.665743801Z<span class="w">                </span>humidity<span class="w">              </span>airSensors<span class="w">                 </span>TLM0100<span class="w">             </span><span class="m">35</span>.78526123104399
-...
-</code></pre></div>
-<h2 id="python">使う (Python)</h2>
-<p><code>influxdb-client</code>という公式ライブラリがあります。自分の環境にインストールしておきましょう。</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>influxdb-client
-</code></pre></div>
-<h3 id="_4">接続</h3>
-<p>WebUIからトークンを取得します。</p>
-<p><img alt="alt" src="../img/influxdb_gui4.png" /></p>
-<p>チュートリアルでは環境変数にトークンを設定し、そこから取るようです。同じようにやりましょう。</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">INFLUXDB_TOKEN</span><span class="o">=</span>****
-</code></pre></div>
-<p>次のコードでは、環境変数から取ってきたトークン、org(要調査)、URLを利用してクライアントをインスタンス化します。</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">influxdb_client</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">influxdb_client</span> <span class="kn">import</span> <span class="n">InfluxDBClient</span><span class="p">,</span> <span class="n">Point</span><span class="p">,</span> <span class="n">WritePrecision</span>
-<span class="kn">from</span> <span class="nn">influxdb_client.client.write_api</span> <span class="kn">import</span> <span class="n">SYNCHRONOUS</span>
+<p>TODO: ちゃんと試す</p>
+<h3 id="localconf">local.confを編集</h3>
+<p><code>conf/local.conf</code>をVSCodeで編集</p>
+<p><code>RPI_USE_U_BOOT = "1"</code> を追加する。</p>
+<div class="highlight"><pre><span></span><code># (中略) ...
+MACHINE = &quot;raspberrypi3-64&quot;
+DL_DIR = &quot;${TOPDIR}/../downloads&quot;
 
-<span class="n">token</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;INFLUXDB_TOKEN&quot;</span><span class="p">)</span>
-<span class="n">org</span> <span class="o">=</span> <span class="s2">&quot;kokshilab&quot;</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://[HOST]:[PORT]&quot;</span>
+# enable uart
+ENABLE_UART = &quot;1&quot;
 
-<span class="n">write_client</span> <span class="o">=</span> <span class="n">influxdb_client</span><span class="o">.</span><span class="n">InfluxDBClient</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">token</span><span class="o">=</span><span class="n">token</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="n">org</span><span class="p">)</span>
+# systemd
+DISTRO_FEATURES:append = &quot; systemd&quot;
+VIRTUAL-RUNTIME_init_manager = &quot;systemd&quot;
+DISTRO_FEATURES_BACKFILL_CONSIDERED = &quot;sysvinit&quot;
+VIRTUAL-RUNTIME_initscripts = &quot;&quot;
+
+# Accept for the synaptics license
+LICENSE_FLAGS_ACCEPTED = &quot;synaptics-killswitch&quot;
+
+RPI_USE_U_BOOT = &quot;1&quot;
 </code></pre></div>
-<h3 id="write-api">Write API</h3>
-<p>InfluxDBにデータを書き込むときは<code>InfluxDBClient.write_api</code>を使います。チュートリアルそのままだと実行できないので変えます。</p>
-<div class="highlight"><pre><span></span><code><span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;sample-bucket&quot;</span>
-
-<span class="c1"># write_api = client.write_api(write_options=SYNCHRONOUS)</span>
-<span class="n">write_api</span> <span class="o">=</span> <span class="n">write_client</span><span class="o">.</span><span class="n">write_api</span><span class="p">(</span><span class="n">write_options</span><span class="o">=</span><span class="n">SYNCHRONOUS</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-  <span class="n">point</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="n">Point</span><span class="p">(</span><span class="s2">&quot;measurement1&quot;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">tag</span><span class="p">(</span><span class="s2">&quot;tagname1&quot;</span><span class="p">,</span> <span class="s2">&quot;tagvalue1&quot;</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="s2">&quot;field1&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-  <span class="p">)</span>
-  <span class="n">write_api</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="s2">&quot;kokshilab&quot;</span><span class="p">,</span> <span class="n">record</span><span class="o">=</span><span class="n">point</span><span class="p">)</span>
-  <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># separate points by 1 second</span>
+<h3 id="_4">ビルド</h3>
+<div class="highlight"><pre><span></span><code>pokyuser@8f2fb8eb82ec:/workdir/build$<span class="w"> </span>bitbake<span class="w"> </span>update-image
 </code></pre></div>
-<h3 id="query-api">Query API</h3>
-<p>データを取るときは<code>InfluxDBClient.query_api</code>を利用します。<a href="https://docs.influxdata.com/influxdb/latest/reference/syntax/flux/">Flux</a>を利用していろいろすることが出来ます。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># query_api = client.query_api()</span>
-<span class="n">query_api</span> <span class="o">=</span> <span class="n">write_client</span><span class="o">.</span><span class="n">query_api</span><span class="p">()</span>
+<h4 id="_5">エラー</h4>
+<div class="highlight"><pre><span></span><code>pokyuser@1f6da7dfe01b:/workdir/build$<span class="w"> </span>bitbake<span class="w"> </span>update-image
+Loading<span class="w"> </span>cache:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="p">|</span><span class="c1">####################################################################################| Time: 0:00:00</span>
+Loaded<span class="w"> </span><span class="m">2838</span><span class="w"> </span>entries<span class="w"> </span>from<span class="w"> </span>dependency<span class="w"> </span>cache.
+NOTE:<span class="w"> </span>Resolving<span class="w"> </span>any<span class="w"> </span>missing<span class="w"> </span>task<span class="w"> </span>queue<span class="w"> </span>dependencies
 
-<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;from(bucket: &quot;sample-bucket&quot;)</span>
-<span class="s2"> |&gt; range(start: -10m)</span>
-<span class="s2"> |&gt; filter(fn: (r) =&gt; r._measurement == &quot;measurement1&quot;)&quot;&quot;&quot;</span>
-<span class="n">tables</span> <span class="o">=</span> <span class="n">query_api</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="s2">&quot;kokshilab&quot;</span><span class="p">)</span>
+Build<span class="w"> </span>Configuration:
+<span class="nv">BB_VERSION</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;2.0.0&quot;</span>
+<span class="nv">BUILD_SYS</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;x86_64-linux&quot;</span>
+<span class="nv">NATIVELSBSTRING</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;universal&quot;</span>
+<span class="nv">TARGET_SYS</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;aarch64-poky-linux&quot;</span>
+<span class="nv">MACHINE</span><span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;raspberrypi3-64&quot;</span>
+<span class="nv">DISTRO</span><span class="w">               </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;poky&quot;</span>
+<span class="nv">DISTRO_VERSION</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;4.0.13&quot;</span>
+<span class="nv">TUNE_FEATURES</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;aarch64 armv8a crc cortexa53&quot;</span>
+<span class="nv">TARGET_FPU</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+meta
+meta-poky
+meta-yocto-bsp<span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;kirkstone:59077aa77b17ca6fdcc4e66d9d8b0c18dc89ecce&quot;</span>
+meta-raspberrypi<span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;kirkstone:59a6a1b5dd1e21189adec49c61eae04ed3e70338&quot;</span>
+meta-oe<span class="w">              </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;kirkstone:79a6f60dabad9e5b0e041efa91379447ef030482&quot;</span>
+meta-swupdate<span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;kirkstone:07c67969137e90e98385aadfb4ef8572a66a0bb5&quot;</span>
+meta-swupdate-boards<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;kirkstone:965bcd8da5ad2174bd2ac05811580e44bbb0e036&quot;</span>
 
-<span class="k">for</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">tables</span><span class="p">:</span>
-  <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">table</span><span class="o">.</span><span class="n">records</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
+Initialising<span class="w"> </span>tasks:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="p">|</span><span class="c1">###############################################################################| Time: 0:00:03</span>
+Sstate<span class="w"> </span>summary:<span class="w"> </span>Wanted<span class="w"> </span><span class="m">907</span><span class="w"> </span>Local<span class="w"> </span><span class="m">0</span><span class="w"> </span>Mirrors<span class="w"> </span><span class="m">0</span><span class="w"> </span>Missed<span class="w"> </span><span class="m">907</span><span class="w"> </span>Current<span class="w"> </span><span class="m">728</span><span class="w"> </span><span class="o">(</span><span class="m">0</span>%<span class="w"> </span>match,<span class="w"> </span><span class="m">44</span>%<span class="w"> </span><span class="nb">complete</span><span class="o">)</span>
+Removing<span class="w"> </span><span class="m">479</span><span class="w"> </span>stale<span class="w"> </span>sstate<span class="w"> </span>objects<span class="w"> </span><span class="k">for</span><span class="w"> </span>arch<span class="w"> </span>cortexa53:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="p">|</span><span class="c1">#############################################| Time: 0:00:01</span>
+Removing<span class="w"> </span><span class="m">178</span><span class="w"> </span>stale<span class="w"> </span>sstate<span class="w"> </span>objects<span class="w"> </span><span class="k">for</span><span class="w"> </span>arch<span class="w"> </span>raspberrypi3_64:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="p">|</span><span class="c1">#######################################| Time: 0:00:02</span>
+Removing<span class="w"> </span><span class="m">28</span><span class="w"> </span>stale<span class="w"> </span>sstate<span class="w"> </span>objects<span class="w"> </span><span class="k">for</span><span class="w"> </span>arch<span class="w"> </span>allarch:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="p">|</span><span class="c1">################################################| Time: 0:00:00</span>
+Removing<span class="w"> </span><span class="m">46</span><span class="w"> </span>stale<span class="w"> </span>sstate<span class="w"> </span>objects<span class="w"> </span><span class="k">for</span><span class="w"> </span>arch<span class="w"> </span>x86_64:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="p">|</span><span class="c1">#################################################| Time: 0:00:00</span>
+NOTE:<span class="w"> </span>Executing<span class="w"> </span>Tasks
+ERROR:<span class="w"> </span>update-image-1.0-r0<span class="w"> </span>do_swuimage:<span class="w"> </span>swupdate<span class="w"> </span>cannot<span class="w"> </span>find<span class="w"> </span>image<span class="w"> </span>file:<span class="w"> </span>/workdir/build/tmp/deploy/images/raspberrypi3-64/core-image-full-cmdline.ext4.gz
+ERROR:<span class="w"> </span>Logfile<span class="w"> </span>of<span class="w"> </span>failure<span class="w"> </span>stored<span class="w"> </span><span class="k">in</span>:<span class="w"> </span>/workdir/build/tmp/work/raspberrypi3_64-poky-linux/update-image/1.0-r0/temp/log.do_swuimage.27618
+ERROR:<span class="w"> </span>Task<span class="w"> </span><span class="o">(</span>/workdir/poky/meta-swupdate-boards/recipes-extended/images/update-image.bb:do_swuimage<span class="o">)</span><span class="w"> </span>failed<span class="w"> </span>with<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>code<span class="w"> </span><span class="s1">&#39;1&#39;</span>
+NOTE:<span class="w"> </span>Tasks<span class="w"> </span>Summary:<span class="w"> </span>Attempted<span class="w"> </span><span class="m">4143</span><span class="w"> </span>tasks<span class="w"> </span>of<span class="w"> </span>which<span class="w"> </span><span class="m">2358</span><span class="w"> </span>didn<span class="err">&#39;</span>t<span class="w"> </span>need<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>rerun<span class="w"> </span>and<span class="w"> </span><span class="m">1</span><span class="w"> </span>failed.
+
+Summary:<span class="w"> </span><span class="m">1</span><span class="w"> </span>task<span class="w"> </span>failed:
+<span class="w">  </span>/workdir/poky/meta-swupdate-boards/recipes-extended/images/update-image.bb:do_swuimage
+Summary:<span class="w"> </span>There<span class="w"> </span>was<span class="w"> </span><span class="m">1</span><span class="w"> </span>ERROR<span class="w"> </span>message,<span class="w"> </span>returning<span class="w"> </span>a<span class="w"> </span>non-zero<span class="w"> </span><span class="nb">exit</span><span class="w"> </span>code.
+pokyuser@1f6da7dfe01b:/workdir/build$
+</code></pre></div>
+<h3 id="_6">書き込み</h3>
+<p><a href="https://github.com/intel/bmap-tools">bmaptools</a>で書き込むのが良いが、Windows環境だと不自由なので解凍してRaspberry pi Imagerを利用して書き込む。</p>
+<div class="highlight"><pre><span></span><code>pokyuser@8f2fb8eb82ec:/workdir/build$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>tmp/deploy/images/raspberrypi3-64/
+pokyuser@8f2fb8eb82ec:/workdir/build/tmp/deploy/images/raspberrypi3-64$<span class="w"> </span>cp<span class="w"> </span>core-image-base-raspberrypi3-64.wic.bz2<span class="w"> </span>/workdir/
+pokyuser@8f2fb8eb82ec:/workdir/build/tmp/deploy/images/raspberrypi3-64$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/workdir/
+pokyuser@8f2fb8eb82ec:/workdir$<span class="w"> </span>bunzip2<span class="w"> </span>core-image-base-raspberrypi3-64.wic.bz2
+</code></pre></div>
+<p>Windows側に<code>core-image-base-raspberrypi3-64.wic</code>を移動させ、カスタムイメージとして書き込む。</p>
+<h3 id="_7">結果</h3>
+<div class="highlight"><pre><span></span><code>root@raspberrypi3-64:~#<span class="w"> </span>cat<span class="w"> </span>/etc/os-release
+<span class="nv">ID</span><span class="o">=</span>poky
+<span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;Poky (Yocto Project Reference Distro)&quot;</span>
+<span class="nv">VERSION</span><span class="o">=</span><span class="s2">&quot;4.2.3 (mickledore)&quot;</span>
+<span class="nv">VERSION_ID</span><span class="o">=</span><span class="m">4</span>.2.3
+<span class="nv">VERSION_CODENAME</span><span class="o">=</span><span class="s2">&quot;mickledore&quot;</span>
+<span class="nv">PRETTY_NAME</span><span class="o">=</span><span class="s2">&quot;Poky (Yocto Project Reference Distro) 4.2.3 (mickledore)&quot;</span>
+root@raspberrypi3-64:~#
 </code></pre></div>
 
 
@@ -1224,7 +1230,7 @@ Table:<span class="w"> </span>keys:<span class="w"> </span><span class="o">[</sp
       <nav class="md-footer__inner md-grid" aria-label="フッター" >
         
           
-          <a href="../pipenv/" class="md-footer__link md-footer__link--prev" aria-label="前: Pipenv" rel="prev">
+          <a href="../ubuntu_core/" class="md-footer__link md-footer__link--prev" aria-label="前: Ubuntu Core" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1233,20 +1239,20 @@ Table:<span class="w"> </span>keys:<span class="w"> </span><span class="o">[</sp
                 <span class="md-footer__direction">
                   前
                 </span>
-                Pipenv
+                Ubuntu Core
               </div>
             </div>
           </a>
         
         
           
-          <a href="../flet/" class="md-footer__link md-footer__link--next" aria-label="次: Flet" rel="next">
+          <a href="../yocto/" class="md-footer__link md-footer__link--next" aria-label="次: Yocto" rel="next">
             <div class="md-footer__title">
               <div class="md-ellipsis">
                 <span class="md-footer__direction">
                   次
                 </span>
-                Flet
+                Yocto
               </div>
             </div>
             <div class="md-footer__button md-icon">

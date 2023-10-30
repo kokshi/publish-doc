@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://kokshi.github.io/publish-doc/app/yocto/">
+        <link rel="canonical" href="https://kokshi.github.io/publish-doc/embedded/yocto/">
       
       
+        <link rel="prev" href="../yocto-swupdate-rpi/">
+      
+      
+        <link rel="next" href="../../other/learning_modern_linux/3_script/">
       
       <link rel="icon" href="../../img/favicon.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
@@ -208,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../pipenv/" class="md-tabs__link">
+      <a href="../../app/pipenv/" class="md-tabs__link">
         Application
       </a>
     </li>
@@ -226,6 +230,24 @@
     <li class="md-tabs__item">
       <a href="../../infra/proxmox/" class="md-tabs__link">
         Infrastructure
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ubuntu_core/" class="md-tabs__link md-tabs__link--active">
+        Embedded
       </a>
     </li>
   
@@ -401,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pipenv/" class="md-nav__link">
+      <a href="../../app/pipenv/" class="md-nav__link">
         Pipenv
       </a>
     </li>
@@ -415,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../influxdb/" class="md-nav__link">
+      <a href="../../app/influxdb/" class="md-nav__link">
         InfluxDB
       </a>
     </li>
@@ -429,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../flet/" class="md-nav__link">
+      <a href="../../app/flet/" class="md-nav__link">
         Flet
       </a>
     </li>
@@ -598,6 +620,228 @@
 
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Embedded
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Embedded
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ubuntu_core/" class="md-nav__link">
+        Ubuntu Core
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yocto-swupdate-rpi/" class="md-nav__link">
+        Yocto + SWUpdate + RPi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Yocto
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Yocto
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raspberry-pi3" class="md-nav__link">
+    Raspberry Pi3で試す
+  </a>
+  
+    <nav class="md-nav" aria-label="Raspberry Pi3で試す">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ビルド環境
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ターゲット
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poky" class="md-nav__link">
+    Poky環境のセットアップ
+  </a>
+  
+    <nav class="md-nav" aria-label="Poky環境のセットアップ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta-raspberrypi" class="md-nav__link">
+    meta-raspberrypiの取得
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localconf" class="md-nav__link">
+    local.confを編集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    ビルド
+  </a>
+  
+    <nav class="md-nav" aria-label="ビルド">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux-raspberrypi-do_fetch-failed-to-fetch" class="md-nav__link">
+    エラー: linux-raspberrypi-...do_fetch: Failed to fetch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    書き込み
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    結果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    資料
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
   
     
     <li class="md-nav__item md-nav__item--nested">
@@ -607,17 +851,17 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           Other
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Other
         </label>
@@ -636,17 +880,17 @@
       
         
       
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
           入門モダンLinux
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_1">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_1">
           <span class="md-nav__icon md-icon"></span>
           入門モダンLinux
         </label>
@@ -821,6 +1065,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    資料
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -899,7 +1150,7 @@ raspberrypi<span class="w">           </span>/workdir/poky/meta-raspberrypi<span
 <h3 id="localconf">local.confを編集</h3>
 <p><code>conf/local.conf</code>をVSCodeで編集</p>
 <div class="highlight"><pre><span></span><code># (中略) ...
-MACHINE = &quot;raspberrypi4-64&quot;
+MACHINE = &quot;raspberrypi3-64&quot;
 DL_DIR = &quot;${TOPDIR}/../downloads&quot;
 
 # enable uart
@@ -999,6 +1250,8 @@ pokyuser@8f2fb8eb82ec:/workdir$<span class="w"> </span>bunzip2<span class="w"> <
 <span class="nv">PRETTY_NAME</span><span class="o">=</span><span class="s2">&quot;Poky (Yocto Project Reference Distro) 4.2.3 (mickledore)&quot;</span>
 root@raspberrypi3-64:~#
 </code></pre></div>
+<h2 id="_8">資料</h2>
+<p><a href="https://qiita.com/AngryMane/items/61d2fa47246a9f9217f5">Yoctoの概要 #Linux - Qiita</a></p>
 
 
 
@@ -1020,6 +1273,42 @@ root@raspberrypi3-64:~#
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="フッター" >
+        
+          
+          <a href="../yocto-swupdate-rpi/" class="md-footer__link md-footer__link--prev" aria-label="前: Yocto + SWUpdate + RPi" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  前
+                </span>
+                Yocto + SWUpdate + RPi
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../other/learning_modern_linux/3_script/" class="md-footer__link md-footer__link--next" aria-label="次: 第3章" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  次
+                </span>
+                第3章
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

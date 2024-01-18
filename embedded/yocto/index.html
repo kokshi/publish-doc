@@ -816,6 +816,26 @@
       
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
+    アプリケーションを追加する
+  </a>
+  
+    <nav class="md-nav" aria-label="アプリケーションを追加する">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    試しにdockerを追加
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
     資料
   </a>
   
@@ -1067,6 +1087,26 @@
       
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
+    アプリケーションを追加する
+  </a>
+  
+    <nav class="md-nav" aria-label="アプリケーションを追加する">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    試しにdockerを追加
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
     資料
   </a>
   
@@ -1250,7 +1290,23 @@ pokyuser@8f2fb8eb82ec:/workdir$<span class="w"> </span>bunzip2<span class="w"> <
 <span class="nv">PRETTY_NAME</span><span class="o">=</span><span class="s2">&quot;Poky (Yocto Project Reference Distro) 4.2.3 (mickledore)&quot;</span>
 root@raspberrypi3-64:~#
 </code></pre></div>
-<h2 id="_8">資料</h2>
+<h2 id="_8">アプリケーションを追加する</h2>
+<p><code>IMAGE_INSTALL</code>変数にパッケージを追加する(重要)。なので、なにかアプリケーションをインストールするときは次の手順になる。</p>
+<ol>
+<li>レイヤーを追加</li>
+<li>アプリケーションを追加</li>
+</ol>
+<h3 id="docker">試しにdockerを追加</h3>
+<p><code>meta-virtualization</code>に含まれているらしい。</p>
+<div class="highlight"><pre><span></span><code>pokyuser@f58fb7064379:/workdir/build$<span class="w"> </span>bitbake-layers<span class="w"> </span>layerindex-fetch<span class="w"> </span>meta-virtualization
+</code></pre></div>
+<p><code>local.conf</code>に下記を追加。</p>
+<div class="highlight"><pre><span></span><code>IMAGE_INSTALL:append = &quot; packagegroup-docker&quot;
+</code></pre></div>
+<p>で、こう。</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<h2 id="_9">資料</h2>
 <p><a href="https://qiita.com/AngryMane/items/61d2fa47246a9f9217f5">Yoctoの概要 #Linux - Qiita</a></p>
 
 

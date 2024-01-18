@@ -2,122 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kokshi.github.io/publish-doc/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/document/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/future_development/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/mkdocs/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/app/flet/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/app/influxdb/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/app/misskey/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/app/pipenv/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/embedded/ubuntu_core/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/embedded/yocto-swupdate-rpi/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/embedded/yocto/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/infra/esxi_cloudinit/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/infra/esxi_optiplex/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/infra/future_storage/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/infra/grafana_cloud/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/infra/ix2215_initial/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/infra/ix2215_ipoe/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kokshi.github.io/publish-doc/infra/linux_tips/</loc>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/infra/proxmox/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/infra/room_network/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/infra/tailscale/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/infra/vm_ipaddress/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/other/test/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/other/learning_modern_linux/3_script/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kokshi.github.io/publish-doc/other/learning_modern_linux/4_access_controls/</loc>
-         <lastmod>2023-10-30</lastmod>
+         <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

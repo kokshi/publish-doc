@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vdi" class="md-skip">
+        <a href="#linux-vdi" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -652,6 +652,19 @@
     概要
   </a>
   
+    <nav class="md-nav" aria-label="概要">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    要素
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -663,7 +676,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     インストール
   </a>
   
@@ -678,7 +691,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     ユーザーマッピングを定義
   </a>
   
@@ -713,7 +726,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     ポートが空いているか
   </a>
   
@@ -725,7 +738,48 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache-guacamole" class="md-nav__link">
+    Apache Guacamole
+  </a>
+  
+    <nav class="md-nav" aria-label="Apache Guacamole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    結果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    手順
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    docker compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
     参考
   </a>
   
@@ -976,6 +1030,19 @@
     概要
   </a>
   
+    <nav class="md-nav" aria-label="概要">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    要素
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -987,7 +1054,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     インストール
   </a>
   
@@ -1002,7 +1069,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     ユーザーマッピングを定義
   </a>
   
@@ -1037,7 +1104,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     ポートが空いているか
   </a>
   
@@ -1049,7 +1116,48 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache-guacamole" class="md-nav__link">
+    Apache Guacamole
+  </a>
+  
+    <nav class="md-nav" aria-label="Apache Guacamole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    結果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    手順
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    docker compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
     参考
   </a>
   
@@ -1078,18 +1186,25 @@
   
 
 
-<h1 id="vdi">VDI環境の構築練習</h1>
+<h1 id="linux-vdi">Linux VDI環境の構築</h1>
 <p>Created: 2024/02/05</p>
 <h2 id="_1">概要</h2>
-<p>いいかげんにLinuxでVNCとか快適に使えるようにしたいので。</p>
+<p>Linux環境でVDIを実現する方法を調査する。</p>
+<h3 id="_2">要素</h3>
+<ul>
+<li>VNC Server</li>
+<li>TigerVNC ... Ubuntuでは<code>gnome-remote-desktop</code>が初期装備としてあるが、VNC/RDPはあまり使いやすくない。一般的に使われていそうなTigerVNCを利用してみる</li>
+<li>VDI</li>
+<li>Apache Guacamole™ ... Apache「ワカモレ」と読む。ブラウザ経由で配下のサーバーにアクセスできる。</li>
+</ul>
 <h2 id="tigervnc">TigerVNC</h2>
 <p>Ubuntu DesktopでTigerVNCサーバーを使えるようにする。</p>
-<h3 id="_2">インストール</h3>
+<h3 id="_3">インストール</h3>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>tigervnc-standalone-server<span class="w"> </span>tigervnc-scraping-server
 </code></pre></div>
 <h3 id="vnc">特定のユーザーでVNCサーバーを有効にする</h3>
 <p>VNCサーバーはユーザーごとにセッションを開く。一番ユースケースとしてありそうな「サーバーの特定のユーザー専用のVNC接続」を実現する。</p>
-<h4 id="_3">ユーザーマッピングを定義</h4>
+<h4 id="_4">ユーザーマッピングを定義</h4>
 <p><code>/etc/tigervnc/vncserver.users</code>にユーザーごとにディスプレイ＆ポート番号への紐づけを書く。ここでは<code>shiba01</code>ユーザーに:2を割り当てている。これはTCPポート5902(5900+2)をも意味する。</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>/etc/tigervnc/vncserver.users
 <span class="c1"># TigerVNC User assignment</span>
@@ -1143,7 +1258,7 @@ $<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w">
 <h4 id="vncultra-vnc">VNCクライアントから接続する(Ultra VNC)</h4>
 <p>Ultra VNCから接続する。※IPアドレス<code>192.168.10.116</code></p>
 <p><img alt="alt" src="../img/ultravnc.png" /></p>
-<h4 id="_4">ポートが空いているか</h4>
+<h4 id="_5">ポートが空いているか</h4>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>nmap<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>-p<span class="w"> </span><span class="m">5900</span>-5999
 Starting<span class="w"> </span>Nmap<span class="w"> </span><span class="m">7</span>.80<span class="w"> </span><span class="o">(</span><span class="w"> </span>https://nmap.org<span class="w"> </span><span class="o">)</span><span class="w"> </span>at<span class="w"> </span><span class="m">2024</span>-02-08<span class="w"> </span><span class="m">23</span>:38<span class="w"> </span>JST
 Nmap<span class="w"> </span>scan<span class="w"> </span>report<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="m">0</span>.0.0.0
@@ -1154,11 +1269,72 @@ PORT<span class="w">     </span>STATE<span class="w"> </span>SERVICE
 
 Nmap<span class="w"> </span><span class="k">done</span>:<span class="w"> </span><span class="m">1</span><span class="w"> </span>IP<span class="w"> </span>address<span class="w"> </span><span class="o">(</span><span class="m">1</span><span class="w"> </span>host<span class="w"> </span>up<span class="o">)</span><span class="w"> </span>scanned<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.03<span class="w"> </span>seconds
 </code></pre></div>
-<h3 id="_5">参考</h3>
+<h3 id="_6">参考</h3>
 <ul>
 <li><a href="https://wiki.archlinux.jp/index.php/TigerVNC">TigerVNC - ArchWiki</a></li>
 <li><a href="https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-tigervnc">第13章 TigerVNC Red Hat Enterprise Linux 7 | Red Hat Customer Portal</a></li>
 <li><a href="https://qiita.com/tats-u/items/c170f61a5e03ae045128">つまずかない！？TigerVNCでリモートデスクトップ #VNC - Qiita</a></li>
+</ul>
+<h2 id="apache-guacamole">Apache Guacamole</h2>
+<h3 id="_7">結果</h3>
+<p><img alt="alt text" src="../img/guacamole.png" /></p>
+<div class="highlight"><pre><span></span><code>guacamole/
+┣ pgdata/
+┃ ┗ guacamole/
+┣ pginit/
+┃ ┗ initdb.sql
+┗ docker-compose.yml
+</code></pre></div>
+<h3 id="_8">手順</h3>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>guacamole/guacamole<span class="w"> </span>/opt/guacamole/bin/initdb.sh<span class="w"> </span>--postgresql<span class="w"> </span>&gt;<span class="w"> </span>./pginit/initdb.sql
+sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<h3 id="docker-compose">docker compose</h3>
+<div class="highlight"><pre><span></span><code>version: &quot;3&quot;
+services:
+
+  postgres:
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      PGDATA: /var/lib/postgresql/data/guacamole
+      POSTGRES_DB: guacamole_db
+      POSTGRES_PASSWORD: guacamole_db_password
+      POSTGRES_USER: guacamole_user
+    volumes:
+      - ./pginit:/docker-entrypoint-initdb.d
+      - ./pgdata:/var/lib/postgresql/data
+
+  guacd:
+    image: guacamole/guacd:latest
+    restart: unless-stopped
+    # volumes:
+    #   - ./guacd/guacamole:/var/lib/guacamole
+
+  guacamole:
+    image: guacamole/guacamole:latest
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    environment:
+      GUACD_HOSTNAME: guacd
+      POSTGRESQL_HOSTNAME: postgres
+      POSTGRESQL_DATABASE: guacamole_db
+      POSTGRESQL_PASSWORD: guacamole_db_password
+      POSTGRESQL_USER: guacamole_user
+    depends_on:
+      - postgres
+      - guacd
+    # volumes:
+    #   - ./guacamole/extensions:/etc/guacamole/extensions
+    #   - ./guacamole/server.xml:/usr/local/tomcat/conf/server.xml
+    #   - ./guacd/guacamole:/var/lib/guacamole
+</code></pre></div>
+<h3 id="_9">参考</h3>
+<ul>
+<li><a href="https://guacamole.apache.org/">Apache Guacamole</a></li>
+<li><a href="https://qiita.com/testnin2/items/e7b8798d5d1c674fbd5c">docker-composeを使ったApache guacamole（ワカモレ）の構築手順 #ibmcloud - Qiita</a></li>
+<li><a href="https://www.designet.co.jp/ossinfo/apacheguacamole/">Apache Guacamole〜リモートデスクトップのOSS〜 | OSSのデージーネット</a></li>
 </ul>
 
 

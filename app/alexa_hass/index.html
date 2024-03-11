@@ -8,27 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://kokshi.github.io/publish-doc/other/learning_modern_linux/3_script/">
+        <link rel="canonical" href="https://kokshi.github.io/publish-doc/app/alexa_hass/">
       
       
-        <link rel="prev" href="../../../embedded/yocto/">
+        <link rel="prev" href="../misskey/">
       
       
-        <link rel="next" href="../../test/">
+        <link rel="next" href="../../infra/esxi_optiplex/">
       
-      <link rel="icon" href="../../../img/favicon.svg">
+      <link rel="icon" href="../../img/favicon.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>第3章 - こくしラボ</title>
+        <title>Home Assistant + Alexa - こくしラボ</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.c4a75a56.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4a75a56.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -46,9 +46,9 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3" class="md-skip">
+        <a href="#home-assistant-alexa-cloudflare-tunnel" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -87,7 +87,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
-    <a href="../../.." title="こくしラボ" class="md-header__button md-logo" aria-label="こくしラボ" data-md-component="logo">
+    <a href="../.." title="こくしラボ" class="md-header__button md-logo" aria-label="こくしラボ" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第3章
+              Home Assistant + Alexa
             
           </span>
         </div>
@@ -181,7 +181,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../.." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       はじめに
     </a>
   </li>
@@ -196,7 +196,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../mkdocs/" class="md-tabs__link">
+      <a href="../../mkdocs/" class="md-tabs__link">
         Documentation
       </a>
     </li>
@@ -206,13 +206,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../app/pipenv/" class="md-tabs__link">
+      <a href="../pipenv/" class="md-tabs__link md-tabs__link--active">
         Application
       </a>
     </li>
@@ -228,7 +230,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../infra/esxi_optiplex/" class="md-tabs__link">
+      <a href="../../infra/esxi_optiplex/" class="md-tabs__link">
         Infrastructure
       </a>
     </li>
@@ -244,7 +246,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../embedded/ubuntu_core/" class="md-tabs__link">
+      <a href="../../embedded/ubuntu_core/" class="md-tabs__link">
         Embedded
       </a>
     </li>
@@ -253,8 +255,6 @@
       
         
   
-  
-    
   
 
 
@@ -267,7 +267,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../other/learning_modern_linux/3_script/" class="md-tabs__link">
         Other
       </a>
     </li>
@@ -297,7 +297,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="こくしラボ" class="md-nav__button md-logo" aria-label="こくしラボ" data-md-component="logo">
+    <a href="../.." title="こくしラボ" class="md-nav__button md-logo" aria-label="こくしラボ" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5V2M6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5Z"/></svg>
@@ -328,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         はじめに
       </a>
     </li>
@@ -372,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mkdocs/" class="md-nav__link">
+      <a href="../../mkdocs/" class="md-nav__link">
         mkdocs
       </a>
     </li>
@@ -392,16 +392,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -410,7 +410,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Application
@@ -423,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../app/pipenv/" class="md-nav__link">
+      <a href="../pipenv/" class="md-nav__link">
         Pipenv
       </a>
     </li>
@@ -437,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../app/influxdb/" class="md-nav__link">
+      <a href="../influxdb/" class="md-nav__link">
         InfluxDB
       </a>
     </li>
@@ -451,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../app/flet/" class="md-nav__link">
+      <a href="../flet/" class="md-nav__link">
         Flet
       </a>
     </li>
@@ -465,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../app/misskey/" class="md-nav__link">
+      <a href="../misskey/" class="md-nav__link">
         Misskey
       </a>
     </li>
@@ -477,11 +477,134 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../app/alexa_hass/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home Assistant + Alexa
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Home Assistant + Alexa
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    要件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudflare-tunnelhttps" class="md-nav__link">
+    Cloudflare TunnelでHTTPSアクセス
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloudflare TunnelでHTTPSアクセス">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    アドオンをインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tunnel" class="md-nav__link">
+    Tunnelを作成する
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alexa-smart-home-skill" class="md-nav__link">
+    Alexa Smart Home Skill
+  </a>
+  
+    <nav class="md-nav" aria-label="Alexa Smart Home Skill">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skill" class="md-nav__link">
+    Skill作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lamda" class="md-nav__link">
+    Lamda作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lamdaalexa" class="md-nav__link">
+    LamdaとAlexaをつなぐ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alexahome-assistant" class="md-nav__link">
+    AlexaとHome Assistantアカウントをつなぐ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    認定を受けて公開する
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -530,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/esxi_optiplex/" class="md-nav__link">
+      <a href="../../infra/esxi_optiplex/" class="md-nav__link">
         ESXi + Dell Optiplex 7050
       </a>
     </li>
@@ -544,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/esxi_cloudinit/" class="md-nav__link">
+      <a href="../../infra/esxi_cloudinit/" class="md-nav__link">
         ESXi + cloud-init
       </a>
     </li>
@@ -558,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/grafana_cloud/" class="md-nav__link">
+      <a href="../../infra/grafana_cloud/" class="md-nav__link">
         Grafana Cloud
       </a>
     </li>
@@ -572,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/ix2215_initial/" class="md-nav__link">
+      <a href="../../infra/ix2215_initial/" class="md-nav__link">
         IX2215の初期設定
       </a>
     </li>
@@ -586,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/ix2215_ipoe/" class="md-nav__link">
+      <a href="../../infra/ix2215_ipoe/" class="md-nav__link">
         IX2215 IPoE(v6プラス, MAP-E方式)で接続する
       </a>
     </li>
@@ -600,7 +723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/room_network/" class="md-nav__link">
+      <a href="../../infra/room_network/" class="md-nav__link">
         自宅ネットワーク
       </a>
     </li>
@@ -614,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/tailscale/" class="md-nav__link">
+      <a href="../../infra/tailscale/" class="md-nav__link">
         Tailscale
       </a>
     </li>
@@ -628,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/linux_vdi/" class="md-nav__link">
+      <a href="../../infra/linux_vdi/" class="md-nav__link">
         Linux VDI(VNCとか)
       </a>
     </li>
@@ -642,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../infra/proxmox/" class="md-nav__link">
+      <a href="../../infra/proxmox/" class="md-nav__link">
         Proxmox VE
       </a>
     </li>
@@ -693,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../embedded/ubuntu_core/" class="md-nav__link">
+      <a href="../../embedded/ubuntu_core/" class="md-nav__link">
         Ubuntu Core
       </a>
     </li>
@@ -707,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../embedded/yocto-swupdate-rpi/" class="md-nav__link">
+      <a href="../../embedded/yocto-swupdate-rpi/" class="md-nav__link">
         Yocto + SWUpdate + RPi
       </a>
     </li>
@@ -721,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../embedded/yocto/" class="md-nav__link">
+      <a href="../../embedded/yocto/" class="md-nav__link">
         Yocto
       </a>
     </li>
@@ -741,16 +864,16 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
       
       
       
@@ -759,7 +882,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Other
@@ -770,16 +893,16 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_1" >
       
       
       
@@ -788,7 +911,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6_1">
           <span class="md-nav__icon md-icon"></span>
           入門モダンLinux
@@ -799,140 +922,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          第3章
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../other/learning_modern_linux/3_script/" class="md-nav__link">
         第3章
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    用語
-  </a>
-  
-    <nav class="md-nav" aria-label="用語">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    ターミナル
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    シェル
-  </a>
-  
-    <nav class="md-nav" aria-label="シェル">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ストリーム
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    変数
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ビルドインコマンド
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    ジョブ制御
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    モダンなコマンド
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    シェル作業の効率化
-  </a>
-  
-    <nav class="md-nav" aria-label="シェル作業の効率化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    ファイル内容の整理
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    長いファイルの参照
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -951,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../test/" class="md-nav__link">
+      <a href="../../other/test/" class="md-nav__link">
         test
       </a>
     </li>
@@ -993,91 +987,85 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    用語
-  </a>
-  
-    <nav class="md-nav" aria-label="用語">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    ターミナル
+    概要
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    要件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudflare-tunnelhttps" class="md-nav__link">
+    Cloudflare TunnelでHTTPSアクセス
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloudflare TunnelでHTTPSアクセス">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    シェル
+    アドオンをインストール
   </a>
   
-    <nav class="md-nav" aria-label="シェル">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tunnel" class="md-nav__link">
+    Tunnelを作成する
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alexa-smart-home-skill" class="md-nav__link">
+    Alexa Smart Home Skill
+  </a>
+  
+    <nav class="md-nav" aria-label="Alexa Smart Home Skill">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skill" class="md-nav__link">
+    Skill作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lamda" class="md-nav__link">
+    Lamda作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lamdaalexa" class="md-nav__link">
+    LamdaとAlexaをつなぐ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alexahome-assistant" class="md-nav__link">
+    AlexaとHome Assistantアカウントをつなぐ
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    ストリーム
+    認定を受けて公開する
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    変数
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ビルドインコマンド
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    ジョブ制御
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    モダンなコマンド
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    シェル作業の効率化
-  </a>
-  
-    <nav class="md-nav" aria-label="シェル作業の効率化">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    ファイル内容の整理
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    長いファイルの参照
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1104,213 +1092,123 @@
   
 
 
-<h1 id="3">3章 シェルとスクリプト</h1>
-<h2 id="_1">用語</h2>
-<h3 id="_2">ターミナル</h3>
+<h1 id="home-assistant-alexa-cloudflare-tunnel">Home Assistant + Alexa (+ Cloudflare Tunnel)</h1>
+<p>Created: 2024/02/29</p>
+<h2 id="_1">概要</h2>
+<p>Home AssistantのESPHomeで繋いだセンサ類や照明を音声で操作したいので公式が出しているドキュメントを参考にやってみます。</p>
+<p><a href="https://www.home-assistant.io/integrations/alexa.smart_home/">Amazon Alexa Smart Home Skill - Home Assistant</a></p>
+<h2 id="_2">要件</h2>
 <ul>
-<li>文字の入出力</li>
-<li>エスケープシーケンス<ul>
-<li>バックスベースとか</li>
+<li>インターネットからのHTTPSアクセス<ul>
+<li>Alexa Smart Home APIの必須要件</li>
+<li>今回はCloudflare Tunnelで実現するのでCloudflareアカウントも必要</li>
 </ul>
 </li>
-<li>種類<ul>
-<li>xterm, rxvt, Gnome terminator</li>
-<li>New: Alacritty, kitty, warp GPUを利用しているらしい</li>
+<li>Amazon Developer アカウント</li>
+<li>AWS アカウント</li>
 </ul>
-</li>
-</ul>
-<h3 id="_3">シェル</h3>
-<p>ターミナル内で動作するプログラム。ストリームによる入出力処理、コマンドの実行をする。対話的／スクリプトでの使用。</p>
-<div class="highlight"><pre><span></span><code>user@vm:~$<span class="w"> </span>file<span class="w"> </span>-h<span class="w"> </span>/bin/sh
-/bin/sh:<span class="w"> </span>symbolic<span class="w"> </span>link<span class="w"> </span>to<span class="w"> </span>dash
-user@vm:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$0</span>
--bash
-user@vm:~$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$SHELL</span>
-/bin/bash
-</code></pre></div>
-<h4 id="_4">ストリーム</h4>
-<p>入力ストリーム(input stream)と出力ストリーム(output stream)がある。2つ合わせて入出力(I/O, Input/Output)という。</p>
-<p>シェルはすべてのプロセスに3つのファイルディスクリプタ(FD)をデフォルトで用意している。</p>
-<ul>
-<li><code>stdin</code> (FD 0): 標準入力</li>
-<li><code>stdout</code> (FD 1): 標準出力</li>
-<li><code>stderr</code> (FD 2): 標準エラー出力</li>
-</ul>
-<p>特に指定しない限り、シェルで入力したコマンドはキーボードから入力(stdin)され、画面に出力(stdout)する。エラー発生時も画面に出力する(stderr)。</p>
-<p>ストリームは<strong>リダイレクト</strong><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>できる。<code>$FD&gt;</code>と<code>&lt;$FD</code>を使用する。<code>$FD</code>はファイルディスクリプタである。</p>
-<p>例えば次の通り。</p>
-<ul>
-<li><code>2&gt;</code> <code>stderr</code>ストリームをリダイレクト</li>
-<li><code>1&gt;</code>, <code>&gt;</code> (同じ意味) <code>stdout</code>ストリームをリダイレクト</li>
-<li><code>&amp;&gt;</code> <code>stderr</code>と<code>stdout</code>の両方をリダイレクト</li>
-</ul>
-<p>また、行き先を<code>/dev/null</code>にするとストリームの出力は破棄される。</p>
-<p>シェルは次の特殊文字を解釈する。</p>
-<ul>
-<li>アンパサンド (<code>&amp;</code>)
-    コマンドの最後に置くとコマンドをバックグランドで実行する</li>
-<li>バックスラッシュ (<code>\</code>)
-    次の行にコマンドを続ける</li>
-<li>パイプ (<code>|</code>)
-    あるプロセスの<code>stdout</code>と次のプロセスの<code>stdin</code>をつなぐ</li>
-</ul>
-<div class="admonition info 登場したコマンド">
-<p class="admonition-title">Info</p>
-<ul>
-<li><code>curl</code> HTTPリクエストを投げる</li>
-<li><code>head</code> 先頭から数行表示する<ul>
-<li>ex <code>$ head -n 10</code></li>
-</ul>
-</li>
-<li><code>tr</code> stdinから読み込んだ文字を置換する</li>
-<li><code>wc</code> 'word count' 文字や行数を数える</li>
-</ul>
-</div>
-<h4 id="_5">変数</h4>
-<p>2種類ある。<code>unset</code>で未定義の状態に戻せる。</p>
-<ul>
-<li>環境変数<ul>
-<li>シェル全体の設定</li>
-<li><code>export</code>を使って作成(bash)</li>
-</ul>
-</li>
-<li>シェル変数<ul>
-<li>実行中のシェルでのみ有効、子プロセスには継承されない</li>
-<li><code>set</code>を使って作成もできる</li>
-</ul>
-</li>
-</ul>
-<p>変数にアクセスするためには変数の前に<code>$</code>をつける。
-実例は次のとおり。</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nv">MY_VAR</span><span class="o">=</span><span class="m">42</span><span class="w"> </span><span class="c1"># シェル変数</span>
-$<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^MY_*&quot;</span>
-<span class="nv">MY_VAR</span><span class="o">=</span><span class="m">42</span>
-$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span>MY_VAR
-MY_VAR
-$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$MY_VAR</span>
-<span class="m">42</span>
-$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">MY_GLB</span><span class="o">=</span><span class="s2">&quot;omg&quot;</span><span class="w"> </span><span class="c1"># 環境変数</span>
-$<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^MY_*&quot;</span>
-<span class="nv">MY_GLB</span><span class="o">=</span>omg
-<span class="nv">MY_VAR</span><span class="o">=</span><span class="m">42</span>
-$<span class="w"> </span>bash<span class="w"> </span><span class="c1"># ここから子プロセスのシェル</span>
-$<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^MY_*&quot;</span>
-<span class="nv">MY_GLB</span><span class="o">=</span>omg<span class="w"> </span><span class="c1"># &lt;- 環境変数だけ</span>
-</code></pre></div>
-<p>次のような環境変数もある。シェルや環境によって異なる。</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span><span class="c1"># ? 直前に実行したコマンドの実行ステータス (0が正常, 1-255は失敗)</span>
-<span class="m">0</span>
-$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$$</span><span class="w"> </span><span class="c1"># $ 現在のプロセスのPID</span>
-<span class="m">198</span>
-$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$0</span><span class="w"> </span><span class="c1"># 0 現在のプロセスの名前</span>
--bash
-$<span class="w"> </span>ps
-<span class="w">  </span>PID<span class="w"> </span>TTY<span class="w">          </span>TIME<span class="w"> </span>CMD
-<span class="w">  </span><span class="m">198</span><span class="w"> </span>pts/2<span class="w">    </span><span class="m">00</span>:00:00<span class="w"> </span>bash
-<span class="w">  </span><span class="m">253</span><span class="w"> </span>pts/2<span class="w">    </span><span class="m">00</span>:00:00<span class="w"> </span>ps
-$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$_</span><span class="w"> </span><span class="c1"># _ 直前のコマンド</span>
-ps
-</code></pre></div>
-<h4 id="_6">ビルドインコマンド</h4>
-<p>シェルにはビルドインコマンドが用意されている。そもそもコマンドにはシェルビルドインだけでなく、<code>/usr/bin</code>などシェルの外部にインストールやエイリアスのコマンドなど種類がある。</p>
-<p>コマンドの種類を調べるためには<code>type</code>が利用できる。</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="nb">cd</span>
-<span class="nb">cd</span><span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>shell<span class="w"> </span><span class="nb">builtin</span>
-$<span class="w"> </span><span class="nb">type</span><span class="w"> </span>sh
-sh<span class="w"> </span>is<span class="w"> </span>/usr/bin/sh
-$<span class="w"> </span><span class="nb">type</span><span class="w"> </span>ls
-ls<span class="w"> </span>is<span class="w"> </span>aliased<span class="w"> </span>to<span class="w"> </span><span class="sb">`</span>ls<span class="w"> </span>--color<span class="o">=</span>auto<span class="err">&#39;</span>
-</code></pre></div>
-<p>また、コマンドの実行可能ファイルがある場所は~~<code>which</code>~~<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> <code>command -v</code> で取得できる。</p>
-<p>参考 <a href="https://qiita.com/ko1nksm/items/29009aeb3f788bb89757">Qiita - POSIXコマンドは「どの環境にもあるコマンド」ではないよという話</a></p>
-<h4 id="_7">ジョブ制御</h4>
-<p><strong>フォアグラウンド実行</strong> シェルで通常通りコマンドを実行し、画面とキーボードの制御を受ける</p>
-<p>対話的に実行しない場合やサーバのようなプログラムの場合、<strong>ジョブ制御</strong>と<strong>バッググラウンドジョブ</strong>がある。</p>
-<ul>
-<li>バックグラウンドでプロセスを起動するには最後に <strong>&amp;</strong> をつける</li>
-<li>フォアグラウンドのプロセスをバッググラウンドに送るには <strong>Ctrl + Z</strong> を押す</li>
-</ul>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>watch<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="s2">&quot;ls&quot;</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span><span class="c1"># watch コマンドをバッググラウンドで実行</span>
-<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="m">299</span>
-$<span class="w"> </span><span class="nb">jobs</span><span class="w"> </span><span class="c1"># すべてのジョブの一覧を表示</span>
-<span class="o">[</span><span class="m">1</span><span class="o">]</span>+<span class="w">  </span>Stopped<span class="w">                 </span>watch<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="s2">&quot;ls&quot;</span>
-$<span class="w"> </span><span class="nb">fg</span><span class="w"> </span><span class="c1"># あるプロセスをフォアグラウンドで実行</span>
-</code></pre></div>
-<div class="admonition info 登場したコマンド">
-<p class="admonition-title">Info</p>
-<ul>
-<li><code>nohup COMMAND &amp;</code> シェルが閉じた後もコマンドをバックグラウンドで実行する</li>
-<li><code>disown</code></li>
-<li><code>kill</code> 対象のプロセスにシグナルを送信して終了させる</li>
-</ul>
-</div>
-<h3 id="_8">モダンなコマンド</h3>
-<p>日常的に使うコマンドをより使いやすくしたコマンドがある。</p>
-<ul>
-<li><code>exa</code> ディレクトリの内容を出力</li>
-<li><code>bat</code> ファイルの内容を表示(<code>cat</code>の進化系)</li>
-<li><code>rg</code> ファイルの中身検索(<code>find</code>と<code>grep</code>)</li>
-<li><code>jq</code> JSONデータの処理</li>
-</ul>
-<h3 id="_9">シェル作業の効率化</h3>
-<h4 id="_10">ファイル内容の整理</h4>
-<p><code>vi</code>を使わないテキストの処理も色々ある。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># /tmp/something を作成し一行追加</span>
-$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;First line&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/tmp/something
-
-<span class="c1"># /tmp/something を表示</span>
-$<span class="w"> </span>cat<span class="w"> </span>/tmp/something
-First<span class="w"> </span>Line
-
-<span class="c1"># /tmp/something の2行目を追記</span>
-$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Second Line&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/tmp/something<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
-&gt;<span class="w"> </span>cat<span class="w"> </span>/tmp/something
-First<span class="w"> </span>Line
-Second<span class="w"> </span>Line
-
-<span class="c1"># /tmp/something の内容をsedで置換しstdoutへ (-iオプションで上書き)</span>
-$<span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/Line/LINE/&#39;</span><span class="w"> </span>/tmp/something
-First<span class="w"> </span>LINE
-Second<span class="w"> </span>LINE
-
-
-<span class="c1"># ヒアドキュメントでファイルを作成</span>
-<span class="c1"># https://tldp.org/LDP/abs/html/here-docs.html</span>
-$<span class="w"> </span>cat<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39; &gt; /tmp/another</span>
-<span class="s">First Line</span>
-<span class="s">Second line</span>
-<span class="s">Third line</span>
-<span class="s">EOF</span>
-
-<span class="c1"># ファイルの差分を表示</span>
-$<span class="w"> </span>diff<span class="w"> </span>-y<span class="w"> </span>/tmp/something<span class="w"> </span>/tmp/another
-First<span class="w"> </span>Line<span class="w">                                                      </span>First<span class="w"> </span>Line
-Second<span class="w"> </span>Line<span class="w">                                                   </span><span class="p">|</span><span class="w"> </span>Second<span class="w"> </span>line
-<span class="w">                                                              </span>&gt;<span class="w"> </span>Third<span class="w"> </span>line
-</code></pre></div>
-<h4 id="_11">長いファイルの参照</h4>
-<p><code>less</code>や<a href="https://github.com/sharkdp/bat/blob/master/doc/README-ja.md">bat</a>のようなページャを使用するのが普通だが、他にもいくつか方法がある。</p>
-<ul>
-<li><code>head</code> ファイルの先頭行を表示<ul>
-<li>ex. <code>head -5 [file]</code> fileの5行目まで表示</li>
-</ul>
-</li>
-<li><code>tail -f</code> 最終行から数行表示するコマンド + <code>-f</code> ライブアップデート出力<ul>
-<li>ex. <code>tail -f [file]</code></li>
-</ul>
-</li>
-</ul>
-<div class="footnote">
-<hr />
+<h2 id="cloudflare-tunnelhttps">Cloudflare TunnelでHTTPSアクセス</h2>
+<p><a href="https://github.com/brenner-tobias/addon-cloudflared/">brenner-tobias/addon-cloudflared: Connect remotely to your Home Assistant instance without opening any ports using Cloudflared.</a></p>
+<p>アドオンがあるので使います。</p>
+<h3 id="_3">アドオンをインストール</h3>
+<p><a href="https://github.com/brenner-tobias/addon-cloudflared/?tab=readme-ov-file#installation">brenner-tobias/addon-cloudflared: Connect remotely to your Home Assistant instance without opening any ports using Cloudflared.</a>のリンクからアドオンを追加しインストールする。</p>
+<h3 id="tunnel">Tunnelを作成する</h3>
+<p><a href="https://github.com/brenner-tobias/addon-cloudflared/wiki/How-tos#how-to-configure-remote-tunnels">How tos · brenner-tobias/addon-cloudflared Wiki</a>に従い作成する。作成後にアクセストークンが表示されるので控えておく。</p>
+<p>アドオンの設定画面にCloudflare Tunnel Tokenを入れる場所があるので、作成時に控えたトークンを入れる。他の設定は（私は）必要なかった。</p>
+<p>Cloudflare Tunnelの一覧に作ったTunnelがActiveになっていればOK。</p>
+<h2 id="alexa-smart-home-skill">Alexa Smart Home Skill</h2>
+<p>Alexaのスキルには色々種類があるが、ここではSmart Home Skillを作成する。</p>
+<p><a href="https://www.home-assistant.io/integrations/alexa.smart_home/#create-an-amazon-alexa-smart-home-skill">Amazon Alexa Smart Home Skill - Home Assistant</a></p>
+<h3 id="skill">Skill作成</h3>
+<p>基本的には手順に従い作成する。まずはSkillを作成する。作成後、Skill IDを控えておく。</p>
+<p><img alt="alt" src="../img/skill_1.png" /></p>
+<p><img alt="alt" src="../img/skill_2.png" /></p>
+<p><img alt="alt" src="../img/skill_3.png" /></p>
+<h3 id="lamda">Lamda作成</h3>
+<p>AWSコンソールに移りAWS LambdaにHome AssistantとAlexaの橋渡しを作成する。</p>
+<p><a href="https://console.aws.amazon.com/">AWS コンソール</a></p>
+<p>その前にLambdaを実行するIAM roleを作成する。</p>
 <ol>
-<li id="fn:1">
-<p>stdin, stdout, stderrをシェルのデフォルト以外に転送すること(シェルのデフォルトはキーボードやモニタ)&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li>ロールを作成</li>
+<li>ステップ１ 信頼されたエンティティを選択でAWSのサービス・Lambdaを選択</li>
+<li>ステップ２ 許可を追加 <code>AWSLambdaBasicExecutionRole</code>を選択 </li>
+<li>ステップ３ 名前と説明をつける</li>
+</ol>
+<p>Lambdaをセットアップする。</p>
+<p><a href="https://console.aws.amazon.com/lambda/home">AWS Lambda</a></p>
+<p>リージョンを選択する。<a href="https://developer.amazon.com/ja-JP/docs/alexa/smarthome/develop-smart-home-skills-in-multiple-languages.html#deploy">スマートホームスキルを複数の言語で開発する | Alexa Skills Kit</a>にあるとおり、日本語の場合「    米国西部（オレゴン）」リージョンを選択する必要がある。</p>
+<ol>
+<li>左メニューから関数を選択し、関数の作成</li>
+<li>名称を設定しランタイムにPythonを選択<ul>
+<li>ドキュメントだと3.9が指定されているので一応合わせる</li>
+</ul>
 </li>
-<li id="fn:2">
-<p><code>which</code>コマンドはPOSIXで規定されていない外部プログラムのため、利用できない環境もあるかもしれません。一方、<code>command</code>はbashではビルドインコマンド(POSIXでも規定)です。&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<li>デフォルトの実行ロールの変更から「既存のロールを利用する」を選択 作成したロールを選ぶ</li>
+<li>関数の作成</li>
+</ol>
+<p>トリガーを設定する。+ トリガーの作成からAlexaとつなぐ。</p>
+<ol>
+<li>Alexaを選択</li>
+<li>Alexa Smart Homeを選択</li>
+<li>Skill IDにAlexa Development Consoleで作ったSkill IDを入力する</li>
+<li>追加</li>
+</ol>
+<p>コードを追加する。コードタブの<code>lambda_function.py</code>にスクリプトを入力する。入力後Deployをクリックする。</p>
+<ul>
+<li><a href="https://gist.github.com/matt2005/744b5ef548cc13d88d0569eea65f5e5b">Alexa Smart Home Skill Adapter for Home Assistant</a></li>
+</ul>
+<p>環境変数を設定する。設定タブの環境変数から次のキーを追加する。</p>
+<ul>
+<li><code>BASE_URL</code>: Home AssistantにアクセスするhttpsなURL、末尾のスラッシュはつけない</li>
+</ul>
+<p>Lambdaをテストする。テストタブに移動し、AlexaのDiscoveryのテストを作成する。</p>
+<ul>
+<li>イベント名: <code>Discovery</code></li>
+<li>イベントJSON
+    <div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="nt">&quot;directive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;header&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;namespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Alexa.Discovery&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Discover&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;payloadVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;messageId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1bd5d003-31b9-476f-ad03-71d471922820&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;payload&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BearerToken&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<p>実行すると<code>"message": "401: Unauthorized</code>が返ってくるがトークンを設定していないので正常である。しっかりとテストをしたい場合は環境変数でいろいろ設定する。今回は省く。</p>
+<h3 id="lamdaalexa">LamdaとAlexaをつなぐ</h3>
+<p>lambdaのARNをAlexa Developer Consoleに接続する。</p>
+<ol>
+<li>スキルを選択</li>
+<li><code>SMART HOME</code>を選択</li>
+<li>AWS Lambda ARNに作成したLambdaのARNを貼る</li>
+<li>SAVE</li>
+</ol>
+<h3 id="alexahome-assistant">AlexaとHome Assistantアカウントをつなぐ</h3>
+<p>アカウントをリンクさせる。</p>
+<ol>
+<li><code>ACCOUNT LINKING</code>を選択</li>
+<li>次の通り入力<ul>
+<li>Authorization URI: <code>https://[YOUR HOME ASSISTANT URL]/auth/authorize</code></li>
+<li>Access Token URI: <code>https://[YOUR HOME ASSISTANT URL]/auth/token</code></li>
+<li>Client ID: <code>https://alexa.amazon.co.jp/</code> ※日本語の場合</li>
+<li>Client Secret: 適当でOK。Home Assistantはこのフィールドを見ない。</li>
+<li>Your Authentication Scheme: <code>Credentials in request body</code> を選択</li>
+<li>Scope: <code>smart_home</code>を入力</li>
+<li>Domain List: 空欄</li>
+<li>Default Access Token Expiration Time: 空欄</li>
+</ul>
 </li>
 </ol>
-</div>
+<h3 id="_4">認定を受けて公開する</h3>
+<p>認定タブにて検証を行う。期限付きでテストできるようになっているのでとりあえずその状態で様子見ます・・・</p>
 
 
 
@@ -1337,7 +1235,7 @@ Second<span class="w"> </span>Line<span class="w">                              
       <nav class="md-footer__inner md-grid" aria-label="フッター" >
         
           
-          <a href="../../../embedded/yocto/" class="md-footer__link md-footer__link--prev" aria-label="前: Yocto" rel="prev">
+          <a href="../misskey/" class="md-footer__link md-footer__link--prev" aria-label="前: Misskey" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1346,20 +1244,20 @@ Second<span class="w"> </span>Line<span class="w">                              
                 <span class="md-footer__direction">
                   前
                 </span>
-                Yocto
+                Misskey
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../test/" class="md-footer__link md-footer__link--next" aria-label="次: test" rel="next">
+          <a href="../../infra/esxi_optiplex/" class="md-footer__link md-footer__link--next" aria-label="次: ESXi + Dell Optiplex 7050" rel="next">
             <div class="md-footer__title">
               <div class="md-ellipsis">
                 <span class="md-footer__direction">
                   次
                 </span>
-                test
+                ESXi + Dell Optiplex 7050
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1415,10 +1313,10 @@ Second<span class="w"> </span>Line<span class="w">                              
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
     
   </body>
